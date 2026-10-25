@@ -1,0 +1,1597 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>HINDAWY — Take it easy. We’ve got the rest.</title>
+<meta name="description" content="HINDAWY builds systems, automations and AI for schools, education centers, businesses and factories. Founded by Eng. Ahmed Hindawy and Eng. Mohamed Hindawy.">
+<meta name="theme-color" content="#111317">
+<link rel="canonical" href="https://ahmedelhendway0-byte.github.io/portfolio/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111317'/%3E%3Ctext x='9' y='42' font-family='monospace' font-size='30' font-weight='700' fill='%234AAEFF'%3Eh_%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ahmedelhendway0-byte.github.io/portfolio/">
+<meta property="og:title" content="HINDAWY — Take it easy. We’ve got the rest.">
+<meta property="og:description" content="HINDAWY builds systems, automations and AI for schools, education centers, businesses and factories. Founded by Eng. Ahmed Hindawy and Eng. Mohamed Hindawy.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Cairo:wght@400..900&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap">
+<style>
+/* Layout: light-first icy glass site with a dark mode. Hero (typed slogan, 3D code-H, two founder cards) → Founders (Hunter-style cards that drop in)
+   → four projects, one full screen each (how a user uses it + full demo) → What we build (ideas spiralling a spine) → What we use + security → Contact */
+:root{
+  /* modern graphite grey with a touch of blue: light / graphite / dark */
+  --bg:#E6E9ED; --bg-2:#F4F6F8; --ink:#14181D; --muted:#59626D; --line:rgba(20,24,29,.1);
+  --glass:rgba(255,255,255,.5); --glass-edge:rgba(255,255,255,.9); --glass-hi:rgba(255,255,255,.78);
+  --neon:#2E9BFF; --neon-2:#86C8FF; --glow:rgba(46,155,255,.45); --on-neon:#fff;
+  --ok:#15A34A; --bad:#E5484D; --warn:#D97706; --brand-mono:#181717; --gold:#A87613;
+  --f-en:"Archivo","Segoe UI",system-ui,sans-serif; --f-ar:"Cairo",Tahoma,sans-serif; --f-mono:"JetBrains Mono",Consolas,monospace;
+  color-scheme:light;
+}
+:root[data-mode="dark"]{
+  --bg:#111317; --bg-2:#1A1D22; --ink:#E9EDF2; --muted:#8C96A3; --line:rgba(255,255,255,.09);
+  --glass:rgba(255,255,255,.045); --glass-edge:rgba(255,255,255,.13); --glass-hi:rgba(255,255,255,.08);
+  --neon:#4AAEFF; --neon-2:#A0D4FF; --glow:rgba(74,174,255,.5); --on-neon:#06121F;
+  --ok:#4ADE80; --bad:#FF7A85; --warn:#FBBF24; --brand-mono:#F1F3F5; --gold:#E9C46A;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-en);font-size:16px;line-height:1.6;overflow-x:hidden;transition:background .5s,color .5s}
+.ar{font-family:var(--f-ar);direction:rtl;font-weight:400;line-height:1.95}
+button{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--neon);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1260px;margin-inline:auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.wide{font-stretch:122%}
+.label{font:500 12px var(--f-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--neon)}
+.atmo{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(45% 40% at 12% 8%,color-mix(in srgb,var(--neon) 16%,transparent),transparent 70%),radial-gradient(40% 35% at 92% 28%,color-mix(in srgb,var(--neon-2) 12%,transparent),transparent 70%),radial-gradient(60% 50% at 50% 110%,color-mix(in srgb,var(--neon) 12%,transparent),transparent 70%)}
+main,footer{position:relative;z-index:2}
+.glass{background:linear-gradient(160deg,var(--glass-hi),var(--glass));border:1px solid var(--glass-edge);backdrop-filter:blur(22px) saturate(1.5);-webkit-backdrop-filter:blur(22px) saturate(1.5);box-shadow:0 30px 70px -40px rgba(10,40,80,.35),inset 0 1px 0 var(--glass-hi)}
+/* the reading beam: words wait dim, light up as the beam passes, and the glow fades behind it */
+.w{opacity:.28;transition:opacity .35s,color .7s,text-shadow .7s}
+.w.lit{opacity:1}
+.w.now{opacity:1;color:var(--neon-2);text-shadow:0 0 12px var(--neon),0 0 28px var(--glow);transition:none}
+/* slogans: a light band sweeps across the letters every few seconds */
+.beam{background-image:linear-gradient(100deg,transparent 42%,rgba(255,255,255,.95) 49%,var(--neon-2) 51%,transparent 58%),linear-gradient(currentColor,currentColor);
+  background-size:300% 100%,100% 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:var(--ink);-webkit-text-fill-color:transparent;animation:beam 4.5s ease-in-out infinite}
+.hl.beam{background-image:linear-gradient(100deg,transparent 42%,#fff 50%,transparent 58%),linear-gradient(90deg,var(--neon),var(--neon-2))}
+@keyframes beam{0%{background-position:160% 0,0 0}55%,100%{background-position:-60% 0,0 0}}
+
+/* ---------- header ---------- */
+.top{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.top.hide{transform:translateY(-110%)}
+.top-in{margin:12px auto 0;max-width:1260px;width:calc(100% - 24px);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;padding:10px 10px 10px 18px;border-radius:20px;transition:background .3s,border-color .3s,box-shadow .3s;border:1px solid transparent}
+.top.solid .top-in{background:linear-gradient(160deg,var(--glass-hi),var(--glass));border-color:var(--glass-edge);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);box-shadow:0 20px 50px -30px rgba(10,40,80,.4)}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:800 17px var(--f-en);font-stretch:125%;letter-spacing:.14em}
+/* wordmark: the I is a blinking code cursor */
+/* wordmark (L4): lowercase, typed like a terminal command */
+.wm{font:600 22px var(--f-mono);letter-spacing:.01em;display:inline-flex;align-items:baseline;min-width:5.6em}
+.wm .u{color:var(--neon);text-shadow:0 0 10px var(--neon);animation:blink .9s steps(1) infinite}
+.links{justify-self:center;display:flex;gap:2px;position:relative;padding:4px;border-radius:14px}
+.links a{position:relative;z-index:1;display:flex;align-items:baseline;gap:6px;padding:9px 14px;border-radius:10px;text-decoration:none;color:var(--muted);font:600 13.5px var(--f-en);transition:color .25s}
+.links a i{font:500 10px var(--f-mono);font-style:normal;color:var(--neon);opacity:.8}
+.links a:hover,.links a.on{color:var(--ink)}
+.pip{position:absolute;z-index:0;top:4px;height:calc(100% - 8px);border-radius:10px;background:var(--glass-hi);border:1px solid var(--glass-edge);box-shadow:0 0 22px -8px var(--glow);transition:left .45s cubic-bezier(.2,.8,.2,1),width .45s cubic-bezier(.2,.8,.2,1),opacity .3s;opacity:0}
+.tools{display:flex;align-items:center;gap:6px}
+.ib{width:38px;height:38px;border-radius:12px;border:1px solid var(--line);background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+.ib:hover{color:var(--ink);border-color:var(--glass-edge);background:var(--glass)}
+.ib svg{width:17px;height:17px}
+/* "Contact us" is a main action: always visible, same weight as "See our work" */
+.talk{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;background:var(--neon);color:var(--on-neon);text-decoration:none;font:800 13.5px var(--f-en);font-stretch:112%;box-shadow:0 8px 26px -8px var(--glow);white-space:nowrap}
+.ib.lang{font:800 15px var(--f-ar);color:var(--ink)}
+.btn.solid{background:var(--ink);color:var(--bg);box-shadow:0 10px 30px -12px rgba(0,0,0,.5)}
+/* language: in Arabic mode, Arabic becomes the big bold line and English steps back */
+.is-ar{font-family:var(--f-ar)!important;font-stretch:100%!important;letter-spacing:0!important}
+h1.is-ar,h2.is-ar,h3.is-ar,h4.is-ar,b.is-ar{line-height:1.3!important}
+/* big Arabic lines use Cairo Bold */
+h1.is-ar,h2.is-ar{font-weight:800!important}
+[data-lang="ar"] .en,[data-lang="ar"] .p-story p:not(.ar),[data-lang="ar"] .bio:not(.ar),[data-lang="ar"] .icard p:not(.ar){font-size:.86em;opacity:.62}
+[data-lang="ar"] #heroSub{font-size:clamp(13px,1vw,15px)!important;opacity:.6}
+[data-lang="ar"] p.ar,[data-lang="ar"] .p-story .ar,[data-lang="ar"] .shead .ar{color:var(--ink);font-size:1.12em;font-weight:600}
+.talk::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon)}
+.burger{display:none}
+.menu{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:80px max(24px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(20px)}
+.menu a{font:800 clamp(32px,9vw,54px) var(--f-en);font-stretch:120%;text-decoration:none;letter-spacing:-.02em}
+.menu a i{font:500 13px var(--f-mono);font-style:normal;color:var(--neon);margin-right:12px;vertical-align:middle}
+.menu .x{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:max(18px,env(safe-area-inset-right,0px))}
+@media (max-width:900px){.links,.hide-sm{display:none}.burger{display:grid}.top-in{grid-template-columns:1fr auto;padding-left:14px}.tools{gap:5px}.talk{padding:9px 12px;font-size:12.5px}.ib{width:36px;height:36px}}
+@media (max-width:380px){.wm{font-size:18px;min-width:0}.talk{padding:8px 10px}}
+
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;padding-block:120px 60px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;width:100%}
+.hero-text{display:flex;flex-direction:column;gap:18px}
+.prompt{font:14px var(--f-mono);color:var(--muted)}
+.prompt b{color:var(--neon);font-weight:500}
+.hero h1{margin:0;font-size:clamp(34px,4.2vw,64px);line-height:1;font-weight:800;font-stretch:118%;letter-spacing:-.03em;min-height:3em}
+.hl{background:linear-gradient(90deg,var(--neon),var(--neon-2));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px var(--glow))}
+.caret::after{content:"";display:inline-block;width:.08em;height:.85em;margin-left:.06em;background:var(--neon);vertical-align:-.06em;animation:blink .9s steps(1) infinite;box-shadow:0 0 12px var(--neon)}
+@keyframes blink{50%{opacity:0}}
+/* the goal line under the slogan: a small glowing pill */
+.goal{display:flex;align-items:center;gap:8px;flex-wrap:wrap;align-self:flex-start;margin:0;padding:7px 14px;border-radius:999px;font:500 12px var(--f-mono);letter-spacing:.14em;color:var(--muted);
+  border:1px solid color-mix(in srgb,var(--neon) 40%,transparent);background:color-mix(in srgb,var(--neon) 8%,transparent);box-shadow:0 0 26px -10px var(--glow)}
+.goal i{width:7px;height:7px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon);animation:blink 1.6s steps(1) infinite}
+.goal span{color:var(--neon)}
+.goal b{color:var(--ink);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.slogan .goal{display:inline-flex}
+.hero .sub{margin:0;color:var(--ink);font-size:18px;max-width:44ch}
+.hero .ar{margin:0;color:var(--ink);font-size:17px;max-width:42ch}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:14px;border:0;background:var(--neon);color:var(--on-neon);font:700 14px var(--f-en);font-stretch:112%;cursor:pointer;text-decoration:none;box-shadow:0 10px 30px -10px var(--glow);will-change:transform}
+.btn.ghost{background:var(--glass);color:var(--ink);border:1px solid var(--glass-edge);box-shadow:none}
+.hero-h{position:relative;aspect-ratio:3/4;max-width:100%}
+.hero-h canvas{position:absolute;inset:-20%;width:140%;height:140%}
+.duo{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;max-width:560px;justify-self:end;width:100%}
+/* A3 entrance: a scan line builds the cards from top to bottom */
+.scanbar{position:absolute;left:-4%;right:-4%;top:0;height:3px;background:var(--neon);box-shadow:0 0 18px 4px var(--glow);z-index:6;opacity:0;pointer-events:none}
+
+/* ---------- sharp graphite card (game-card style): neon runs around the edge, letters glow ---------- */
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes ring{to{--a:360deg}}
+.hwrap{position:relative;filter:drop-shadow(0 0 14px var(--glow)) drop-shadow(0 30px 40px rgba(0,0,0,.35));will-change:transform}
+.hcard{--cut:20px;position:relative;aspect-ratio:63/90;padding:2px;color:#E9EEF4;
+  clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut));
+  background:conic-gradient(from var(--a),#4A515B 0 58%,var(--neon) 70%,#fff 75%,var(--neon) 80%,#4A515B 92%);animation:ring 3.2s linear infinite}
+.hc-in{position:relative;height:100%;padding:12px;display:flex;flex-direction:column;gap:8px;overflow:hidden;
+  clip-path:polygon(calc(var(--cut) - 1px) 0,100% 0,100% calc(100% - var(--cut) + 1px),calc(100% - var(--cut) + 1px) 100%,0 100%,0 calc(var(--cut) - 1px));
+  background:linear-gradient(135deg,rgba(255,255,255,.07) 0 22%,transparent 22% 100%),repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 2px,transparent 2px 9px),linear-gradient(165deg,#3A4049,#23272D 55%,#1A1D22)}
+.hc-top{display:flex;justify-content:space-between;align-items:center;font:700 10px var(--f-mono);letter-spacing:.14em;color:#AEB7C2}
+.hc-rank{display:flex;gap:2px}
+.hc-rank i{width:9px;height:12px;background:var(--neon);clip-path:polygon(0 0,100% 50%,0 100%,35% 50%);filter:drop-shadow(0 0 4px var(--neon))}
+.hc-photo{position:relative;flex:1;min-height:0;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);background:radial-gradient(80% 70% at 50% 25%,color-mix(in srgb,var(--neon) 45%,#2A3038),#14171B 85%)}
+.hc-photo .slot{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.7);font:600 10px var(--f-mono);letter-spacing:.2em;text-align:center}
+.hc-photo .slot svg{width:44%;opacity:.5;display:block;margin:0 auto 6px}
+.hc-photo .scan{position:absolute;inset:0;background:linear-gradient(transparent 0 46%,color-mix(in srgb,var(--neon) 35%,transparent) 50%,transparent 54%);background-size:100% 250%;animation:scan 4.5s linear infinite;mix-blend-mode:screen}
+@keyframes scan{from{background-position:0 130%}to{background-position:0 -130%}}
+.hc-name{text-align:left;border-left:3px solid var(--neon);padding-left:9px}
+.hc-name b{display:block;font:900 15px var(--f-en);font-stretch:125%;letter-spacing:.04em;line-height:1.1;text-transform:uppercase;color:#fff;text-shadow:0 0 8px var(--neon),0 0 22px var(--glow)}
+.hc-name small{display:block;font:600 9.5px var(--f-mono);letter-spacing:.16em;color:var(--neon-2);margin-top:3px}
+.hc-bars{display:grid;grid-template-columns:repeat(5,1fr);gap:3px}
+.hc-bars i{height:4px;background:var(--neon);opacity:.85;transform:skewX(-30deg)}
+.hc-bars i:nth-child(n+5){opacity:.25}
+.hc-foot{display:flex;justify-content:space-between;font:600 9px var(--f-mono);color:#8E98A4;letter-spacing:.12em}
+.shine{position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.28) 48%,transparent 60%);transform:translateX(-120%);pointer-events:none;z-index:3}
+.hwrap:hover .shine{transition:transform .9s cubic-bezier(.2,.8,.2,1);transform:translateX(120%)}
+.hwrap:hover .hcard{animation-duration:1.2s}
+.slash{position:absolute;left:-30%;right:-30%;top:50%;height:3px;background:linear-gradient(90deg,transparent,#fff 30%,var(--neon) 50%,#fff 70%,transparent);box-shadow:0 0 22px 4px var(--glow);transform:rotate(-28deg) scaleX(0);opacity:0;pointer-events:none;z-index:5}
+
+/* ---------- founders ---------- */
+.sec{padding-block:120px}
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:46px}
+.shead h2{margin:6px 0 0;font-size:clamp(38px,6vw,84px);line-height:.95;letter-spacing:-.035em;font-weight:800;font-stretch:122%}
+.shead .ar{margin:0;color:var(--muted);max-width:46ch}
+.frow{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:70px;align-items:center;margin-bottom:120px}
+.frow:last-child{margin-bottom:0}
+.frow.flip .fc{order:2}
+.fc{position:relative;width:min(100%,340px);justify-self:center}
+.finfo{position:relative;display:flex;flex-direction:column;gap:16px;min-width:0;padding:30px;border-radius:28px}
+.finfo::before{content:"";position:absolute;inset:-2px;border-radius:30px;z-index:-1;background:linear-gradient(120deg,var(--neon),transparent 35%,transparent 65%,var(--neon-2));filter:blur(14px);opacity:.55}
+/* the name in the same capital style as the card; "Engineer" above it, smaller, in a gold italic serif */
+.fname{margin:0;display:flex;flex-direction:column;gap:6px}
+.fname .eng{font:italic 400 clamp(20px,2.1vw,28px) "Instrument Serif",Georgia,serif;color:var(--gold);letter-spacing:.01em;line-height:1}
+.fname .type{font:900 clamp(26px,3.4vw,46px) var(--f-en);font-stretch:125%;letter-spacing:.04em;line-height:1.05;text-transform:uppercase;overflow-wrap:anywhere}
+:root[data-mode="dark"] .fname .type{color:#fff}
+.fname .type.lit{text-shadow:0 0 8px var(--neon),0 0 26px var(--glow)}
+.roles{display:flex;flex-wrap:wrap;gap:8px}
+.roles span{padding:7px 13px;border-radius:999px;font:600 12.5px var(--f-en);border:1px solid var(--glass-edge);background:var(--glass);box-shadow:0 0 18px -10px var(--glow)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.stats div{padding:12px;border-radius:14px;border:1px solid var(--line);background:var(--glass)}
+.stats small{display:block;font:500 10px var(--f-mono);letter-spacing:.16em;color:var(--muted)}
+.stats b{font-size:15px;font-variant-numeric:tabular-nums}
+.bio{margin:0;font-size:16.5px;max-width:62ch}
+.focus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.focus div{padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--glass);font-size:14px}
+.focus small{display:block;font-family:var(--f-ar);direction:rtl;color:var(--muted);font-size:12.5px}
+
+/* ---------- projects ---------- */
+.proj{min-height:100vh;display:flex;align-items:center;padding-block:110px 60px;position:relative}
+.proj + .proj{border-top:1px solid var(--line)}
+.p-in{width:100%;display:flex;flex-direction:column;gap:22px}
+.p-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:end}
+.p-head .num{font:500 13px var(--f-mono);color:var(--neon);letter-spacing:.14em}
+.p-head h2{margin:6px 0 0;font-size:clamp(34px,8vw,96px);line-height:.92;letter-spacing:-.04em;font-weight:900;font-stretch:125%}
+.p-head .ar-t{display:block;font:600 clamp(18px,2vw,24px) var(--f-ar);direction:rtl;text-align:left;color:var(--muted);margin-top:8px}
+.p-story{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.p-story > div{padding:16px;border-radius:18px;border:1px solid var(--line);background:var(--glass)}
+.p-story .safe-box{border-color:color-mix(in srgb,var(--ok) 35%,transparent);background:color-mix(in srgb,var(--ok) 8%,var(--glass))}
+.safe-box b{display:flex;align-items:center;gap:8px}
+.safe-box i{display:grid;place-items:center;width:24px;height:24px;color:var(--ok)}
+.safe-box i svg{width:18px;height:18px}
+/* who uses it: one card per role, with what they see and do */
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px}
+.role{padding:16px;border-radius:18px}
+.role b{display:block;font:800 16px var(--f-en);font-stretch:110%}
+.role b small{display:block;font:500 12.5px var(--f-ar);color:var(--muted);margin-top:2px}
+.role b.is-ar small{font-family:var(--f-en)}
+.role ul{margin:10px 0 0;padding:0 18px 0 0;font-size:13.5px;line-height:1.8}
+.role li::marker{color:var(--neon)}
+/* data tables inside the app mock-ups */
+.ua-tbl{width:100%;border-collapse:collapse;font-size:10.5px;background:#fff;border:1px solid #E3E8F0;border-radius:10px;overflow:hidden}
+.ua-tbl th{background:#F1F5F9;color:#475569;font-weight:600;text-align:right;padding:5px 6px}
+.ua-tbl td{padding:5px 6px;border-top:1px solid #EEF2F7;text-align:right;color:#0F172A}
+.jr-dev.web .ua-tbl{font-size:12px}
+.p-cta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;padding:18px 22px;border-radius:22px}
+.p-cta b{font:800 18px var(--f-en);font-stretch:112%}
+.p-cta .ar{margin:2px 0 0;color:var(--muted)}
+@media (max-width:1100px){.p-story{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.p-story{grid-template-columns:1fr}.p-cta .cta{width:100%}.p-cta .btn{flex:1}}
+.p-story b{display:block;font-size:15px;font-weight:700}
+.p-story p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.p-story .ar{color:var(--ink);font-size:13.5px;margin-top:6px}
+.modes{display:inline-flex;padding:5px;border-radius:14px;border:1px solid var(--glass-edge);background:var(--glass)}
+.modes button{border:0;background:transparent;border-radius:10px;padding:11px 18px;font:700 13.5px var(--f-en);font-stretch:110%;cursor:pointer;color:var(--muted);display:flex;flex-direction:column;align-items:center;line-height:1.2}
+.modes button small{font:500 11px var(--f-ar)}
+.modes button[aria-pressed="true"]{background:var(--neon);color:var(--on-neon);box-shadow:0 8px 24px -10px var(--glow)}
+.stage{border-radius:30px;padding:26px;min-height:520px;display:flex;flex-direction:column;justify-content:center}
+
+/* journey: how a user uses it (auto) */
+.jr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.jr-words{display:flex;flex-direction:column;gap:12px;min-width:0}
+.jr-words h4{margin:0;font-size:clamp(28px,3.6vw,52px);line-height:1.04;letter-spacing:-.035em;font-weight:800;font-stretch:115%;min-height:2.1em}
+.jr-words h4 span{display:inline-block;will-change:transform,filter}
+.jr-words .ar{margin:0;font-size:clamp(16px,1.6vw,20px);color:var(--muted);min-height:2em}
+.dots{display:flex;gap:6px}
+.dots i{width:26px;height:4px;border-radius:2px;background:var(--line);transition:background .3s}
+.dots i.on{background:var(--neon);box-shadow:0 0 10px var(--glow)}
+.hint{font:600 12px var(--f-mono);color:var(--neon);letter-spacing:.08em;margin:0}
+.jr-dev{position:relative;justify-self:center}
+.jr-dev.phone{width:min(100%,280px);aspect-ratio:9/18.5;border-radius:42px;padding:10px;background:#0B1220;box-shadow:0 50px 90px -40px rgba(0,0,0,.6),inset 0 0 0 2px #24324A,0 0 80px -20px var(--glow)}
+.jr-dev.web{width:min(100%,560px);aspect-ratio:16/11;border-radius:16px;padding:30px 0 0;background:#0F172A;box-shadow:0 50px 90px -40px rgba(0,0,0,.6),0 0 80px -20px var(--glow)}
+.jr-dev.web::before{content:"● ● ●";position:absolute;top:7px;left:12px;font-size:9px;letter-spacing:3px;color:#475569}
+.screen{position:relative;width:100%;height:100%;overflow:hidden;background:#F7F9FC;color:#0F172A;border-radius:32px}
+.jr-dev.web .screen{border-radius:0 0 16px 16px}
+.tapdot{position:absolute;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;background:rgba(255,255,255,.55);border:2px solid #fff;box-shadow:0 0 0 6px rgba(0,178,240,.25),0 8px 20px rgba(0,0,0,.25);opacity:0;pointer-events:none;z-index:4}
+
+/* app UI kit (inside the device screens) */
+.ua{height:100%;display:flex;flex-direction:column;font-family:var(--f-ar);direction:rtl;font-size:12.5px}
+.ua-bar{padding:22px 14px 12px;background:var(--app,#0F766E);color:#fff;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.jr-dev.web .ua-bar,.dweb .ua-bar{padding-top:12px}
+.ua-bar b{font-size:14px}
+.ua-bar small{font-size:10.5px;opacity:.85}
+.ua-body{flex:1;overflow:hidden;padding:12px;display:flex;flex-direction:column;gap:7px}
+.ua-row{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border:1px solid #E3E8F0;border-radius:11px;padding:8px 10px}
+.ua-row.bad{background:#FFF1F2;border-color:#FECDD3;color:#9F1239}
+.ua-row.ok{background:#F0FDF4;border-color:#BBF7D0;color:#166534}
+.ua-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.ua-names{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.ua-names span{background:#fff;border:1px solid #E3E8F0;border-radius:9px;padding:6px;text-align:center;font-size:11.5px}
+.ua-names span.abs{background:#FFE4E6;border-color:#FDA4AF;color:#9F1239;text-decoration:line-through}
+.ua-card{background:#fff;border:1px solid #E3E8F0;border-radius:11px;padding:8px 10px}
+.ua-card small{display:block;color:#64748B;font-size:10.5px}
+.ua-card b{font-size:16px;font-family:var(--f-en)}
+.ua-btn{border:0;border-radius:11px;padding:10px;background:var(--app,#0F766E);color:#fff;font:600 12.5px var(--f-ar);cursor:pointer;transition:transform .15s,box-shadow .2s}
+.ua-btn.alt{background:#fff;color:var(--app,#0F766E);border:1px solid currentColor}
+.ua-msg{max-width:84%;padding:8px 11px;border-radius:12px 12px 12px 4px;background:#fff;border:1px solid #E3E8F0;align-self:flex-start}
+.ua-msg.me{align-self:flex-end;background:var(--app,#0F766E);color:#fff;border:0;border-radius:12px 12px 4px 12px}
+.ua-toast{align-self:center;background:#0F172A;color:#fff;border-radius:999px;padding:7px 14px;font-size:11.5px}
+.ua-note{background:#EEF6FF;border:1px solid #CFE3FF;border-radius:11px;padding:9px 10px}
+.ua-bars{display:flex;align-items:flex-end;gap:5px;height:70px;background:#fff;border:1px solid #E3E8F0;border-radius:11px;padding:8px}
+.ua-bars i{flex:1;border-radius:4px 4px 1px 1px;background:var(--app,#0F766E);opacity:.85}
+.ua-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.ua-slots span{background:#fff;border:1px solid #E3E8F0;border-radius:9px;padding:7px;text-align:center;font:600 11px var(--f-mono)}
+.ua-slots span.off{opacity:.35;text-decoration:line-through}
+[data-tap].pressed{transform:scale(.95);box-shadow:0 0 0 4px rgba(0,178,240,.35)}
+.try [data-tap]{animation:want 1.2s ease-in-out infinite;cursor:pointer;position:relative}
+@keyframes want{50%{box-shadow:0 0 0 6px rgba(0,178,240,.35)}}
+
+/* full demos */
+.demo{display:flex;flex-direction:column;gap:14px;align-items:center;min-width:0}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:5px;border-radius:14px;border:1px solid var(--glass-edge);background:var(--glass);direction:rtl}
+.tabs button{border:0;background:transparent;border-radius:10px;padding:9px 14px;font:600 13px var(--f-ar);cursor:pointer;color:var(--muted)}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.dphone{width:min(100%,300px);aspect-ratio:9/18.5;border-radius:42px;padding:10px;background:#0B1220;box-shadow:0 40px 80px -30px rgba(0,0,0,.55),inset 0 0 0 2px #24324A}
+.dweb{width:min(100%,680px);border-radius:16px;overflow:hidden;background:#0F172A;box-shadow:0 40px 80px -30px rgba(0,0,0,.55);padding-top:26px;position:relative}
+.dweb::before{content:"● ● ●";position:absolute;top:6px;left:12px;font-size:9px;letter-spacing:3px;color:#475569}
+.dweb .screen{border-radius:0;min-height:380px;max-height:520px;overflow:auto}
+.dphone .ua-body,.dweb .ua-body{overflow:auto}
+.dnote{font:500 11px var(--f-mono);color:var(--muted);text-align:center}
+.ua-in{display:flex;gap:6px}
+.ua-in input{flex:1;min-width:0;border:1px solid #E3E8F0;border-radius:10px;padding:8px;font:13px var(--f-mono);text-align:center;direction:ltr;background:#fff;color:#0F172A}
+.ua-row button,.ua-names button{border:0;border-radius:999px;padding:3px 10px;font:600 11px var(--f-ar);cursor:pointer}
+.ua-names button{border:1px solid #E3E8F0;border-radius:9px;padding:6px;background:#fff;font-size:11.5px;color:#0F172A}
+.ua-names button.abs{background:#FFE4E6;border-color:#FDA4AF;color:#9F1239;text-decoration:line-through}
+.s-in{background:#DCFCE7;color:#166534}.s-out{background:#FFE4E6;color:#9F1239}.s-late{background:#FEF3C7;color:#92400E}.s-done{background:#E0F2FE;color:#075985}
+.sizes{display:inline-flex;gap:4px;padding:4px;border-radius:12px;border:1px solid var(--glass-edge);background:var(--glass)}
+.sizes button{border:0;background:transparent;border-radius:9px;padding:7px 13px;font:700 12px var(--f-en);cursor:pointer;color:var(--muted)}
+.sizes button[aria-pressed="true"]{background:var(--neon);color:var(--on-neon)}
+.frame{width:300px;max-width:100%;border-radius:22px;border:8px solid #0B1220;overflow:hidden;transition:width .6s cubic-bezier(.2,.8,.2,1);container-type:inline-size;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
+.frame .ua{min-height:420px;background:#F7F9FC;color:#0F172A}
+.frame .ua-grid{grid-template-columns:1fr}
+@container (min-width:420px){.frame .ua-grid{grid-template-columns:1fr 1fr}}
+@container (min-width:600px){.frame .ua-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- the flagship ERP: one dashboard for the whole company ---------- */
+.erp-badge{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;font:600 12px var(--f-mono);letter-spacing:.16em;color:var(--neon);
+  border:1px solid color-mix(in srgb,var(--neon) 45%,transparent);box-shadow:0 0 30px -8px var(--glow)}
+.erp-badge i{width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon)}
+.erp-lead{margin:0;max-width:70ch;font-size:17px}
+.erp-lead.ar{font-size:16px;color:var(--ink)}
+.erp-view{position:relative;padding-right:120px}
+.erp-dash{border-radius:22px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(0,0,0,.6),0 0 60px -30px var(--glow)}
+.ed-bar{display:flex;align-items:center;gap:7px;padding:11px 16px;border-bottom:1px solid var(--line);font:500 12px var(--f-ar);color:var(--muted)}
+.ed-bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.ed-bar span{margin-inline:10px auto}
+.ed-bar em{font:600 11px var(--f-mono);font-style:normal;color:var(--ok);letter-spacing:.1em}
+.ed-body{display:grid;grid-template-columns:150px minmax(0,1fr);font-family:var(--f-ar)}
+.ed-body aside{display:flex;flex-direction:column;gap:2px;padding:14px 10px;border-left:1px solid var(--line);font-size:13px}
+.ed-body aside > *{padding:7px 10px;border-radius:9px;color:var(--muted)}
+.ed-body aside b{color:var(--neon);background:color-mix(in srgb,var(--neon) 12%,transparent);font-weight:700}
+.ed-main{display:flex;flex-direction:column;gap:12px;padding:16px;min-width:0}
+.ed-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ed-kpis > div,.ed-card{padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:color-mix(in srgb,var(--ink) 3%,transparent);min-width:0}
+.ed-kpis small,.ed-card > small{display:block;font-size:12px;color:var(--muted)}
+.ed-kpis b{display:block;font-size:20px;font-weight:800;margin:2px 0}
+.ed-kpis em{font-style:normal;font-size:11.5px;color:var(--muted)}
+.ed-kpis em.up{color:var(--ok)}.ed-kpis em.warn{color:var(--warn)}
+.ed-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:12px}
+.ed-bars{display:flex;align-items:flex-end;gap:5px;height:96px;margin-top:10px;direction:ltr}
+.ed-bars i{flex:1;border-radius:5px 5px 2px 2px;background:color-mix(in srgb,var(--neon) 35%,transparent)}
+.ed-bars i.now{background:var(--neon);box-shadow:0 0 16px var(--glow)}
+.ed-axis{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px;direction:ltr}
+.ed-line{display:grid;grid-template-columns:1fr auto;gap:2px 8px;margin-top:9px;font-size:12.5px}
+.ed-line b{font:600 12px var(--f-mono)}
+.ed-line i{grid-column:1/-1;height:6px;border-radius:9px;background:var(--line);position:relative;overflow:hidden}
+.ed-line i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);border-radius:9px;background:linear-gradient(90deg,var(--neon-2),var(--neon))}
+[dir="rtl"] .ed-line i::after{inset:0 0 0 auto}
+.ed-log{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:13px}
+.ed-log:first-of-type{border-top:0;margin-top:4px}
+.ed-log span{font:500 11.5px var(--f-mono);color:var(--muted)}
+.ed-log p{margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ed-log b{font-weight:700;color:var(--neon)}
+/* the owner's phone, at home, getting the important moments */
+.erp-phone{position:absolute;right:0;bottom:-26px;width:250px;padding:14px;border-radius:30px;font-family:var(--f-ar);
+  background:linear-gradient(170deg,#1b2230,#0d1118);color:#eef2f7;border:6px solid #2a3140;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 50px -20px var(--glow)}
+.ep-top{display:flex;justify-content:space-between;align-items:center;padding:4px 4px 10px}
+.ep-top b{font-size:14px}.ep-top small{font:11px var(--f-mono);opacity:.6}
+.ep-n{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:14px;background:rgba(255,255,255,.07);margin-top:8px;border:1px solid rgba(255,255,255,.08)}
+.ep-n i{font-style:normal;font-size:15px;line-height:1.4}
+.ep-n p{margin:0;font-size:11.5px;line-height:1.55;opacity:.85}
+.ep-n p b{display:block;font-size:12.5px;opacity:1}
+.ep-n.warn{border-color:rgba(251,191,36,.4)}.ep-n.ok{border-color:rgba(74,222,128,.4)}
+.erp-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.erp-flow > div{padding:10px 14px;border-radius:14px;border:1px solid var(--line);background:var(--glass);text-align:center}
+.erp-flow > div b{display:block;font:700 14px var(--f-ar)}
+.erp-flow > div small{font:500 11px var(--f-mono);color:var(--muted);letter-spacing:.06em}
+.erp-flow > div.end{border-color:var(--neon);box-shadow:0 0 26px -8px var(--glow)}
+.erp-flow > span{color:var(--neon);font-weight:700}
+@media (max-width:900px){
+  .erp-view{padding-right:0}
+  .erp-phone{position:relative;right:auto;bottom:auto;margin:-30px auto 0;width:min(280px,86vw)}
+  .ed-body{grid-template-columns:minmax(0,1fr)}.ed-body aside{display:none}
+  .ed-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ed-row{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  .ed-main{padding:10px}.ed-kpis b{font-size:16px}
+  .erp-flow > span{display:none}.erp-flow > div{flex:1 1 calc(33% - 8px);padding:8px}
+}
+
+/* ---------- what we build: spine + spiral ---------- */
+.build{position:relative;height:280vh}
+.build-pin{position:sticky;top:0;height:100vh;overflow:hidden}
+.build-head{position:absolute;left:0;right:0;top:calc(96px + env(safe-area-inset-top,0px));z-index:20;pointer-events:none}
+.build-head .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+.build-head h2{margin:6px 0 0;font-size:clamp(34px,5vw,72px);line-height:.95;letter-spacing:-.035em;font-weight:900;font-stretch:122%}
+.build-head .ar{margin:0;color:var(--muted);max-width:40ch;font-size:15px}
+/* the core: three real-time 3D meshing gears (big, medium, small), faded into the background.
+   The idea cards wrap around them like tape on a reel: in front of the gears on the near side, behind them on the far side */
+#engine{position:absolute;left:50%;top:57%;width:min(760px,64vw);height:min(520px,46vw);transform:translate(-50%,-50%);z-index:5;pointer-events:none;
+  opacity:.42;filter:saturate(.55);mix-blend-mode:screen}
+:root:not([data-mode="dark"]) #engine{mix-blend-mode:multiply;opacity:.36}
+#engine canvas{display:block;width:100%;height:100%}
+.helix{position:absolute;left:50%;top:57%;width:0;height:0}
+/* plain glass cards, large */
+.icard{position:absolute;left:-210px;top:-120px;width:420px;padding:24px;border-radius:24px;text-align:left;cursor:pointer;color:var(--ink);
+  background:linear-gradient(160deg,rgba(255,255,255,.62),rgba(255,255,255,.28));
+  border:1px solid rgba(255,255,255,.75);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 30px 70px -30px rgba(10,20,40,.55),0 0 44px -16px var(--glow);will-change:transform,opacity;display:flex;flex-direction:column;gap:8px}
+:root[data-mode="dark"] .icard{background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));border-color:rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 30px 70px -30px rgba(0,0,0,.8),0 0 44px -16px var(--glow)}
+.icard:hover{border-color:var(--neon)}
+.icard .n{font:500 11px var(--f-mono);color:var(--neon);letter-spacing:.14em}
+.icard b{display:block;font:900 26px var(--f-en);font-stretch:118%;letter-spacing:-.01em;line-height:1.1}
+.icard .ar{display:block;font-size:15px;line-height:1.7}
+.icard p{margin:0;font-size:14px;color:var(--muted)}
+.icard .row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:6px}
+.icard .who{font:600 11px var(--f-mono);padding:4px 9px;border-radius:999px;background:color-mix(in srgb,var(--neon) 16%,transparent);color:var(--neon)}
+.brands{display:flex;gap:5px}
+.brands i{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.9)}
+.brands i svg{width:14px;height:14px}
+.build-hint{position:absolute;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;font:500 12px var(--f-mono);color:var(--muted);letter-spacing:.12em;z-index:20}
+@media (max-width:900px){
+  #engine{width:96vw;height:70vw;top:60%}.helix{top:62%}
+  .icard{width:340px;left:-170px;top:-110px}
+}
+@media (max-width:600px){
+  .icard{width:min(270px,76vw);left:calc(min(270px,76vw) / -2);top:-100px;padding:16px;gap:6px}.icard b{font-size:20px}.icard p{display:none}
+  .build-head h2{font-size:30px}.build-head .ar{font-size:13px;max-width:none}
+  #engine{width:100vw;height:78vw;top:62%}.helix{top:64%}
+}
+
+/* "works on" platforms strip */
+.works{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:16px 18px;border-radius:18px}
+.works b{font:800 14px var(--f-en);font-stretch:112%}
+.works .ar{flex-basis:100%;margin:0;font-size:13.5px;color:var(--muted)}
+.works .brands i{width:34px;height:34px;border-radius:10px}
+.works .brands i svg{width:18px;height:18px}
+
+/* journey callout: what this screen is and who can see it */
+.jr-note{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:14px;border:1px solid var(--glass-edge);background:var(--glass);font-size:14px}
+.jr-note i{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:color-mix(in srgb,var(--neon) 16%,transparent);color:var(--neon)}
+.jr-note i svg{width:15px;height:15px}
+.jr-note b{display:block}
+.jr-note .ar{color:var(--muted);font-size:13px;margin:0;min-height:0}
+
+/* coming soon */
+.lab-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.lab{position:relative;padding:22px;border-radius:24px;overflow:hidden;min-height:220px;display:flex;flex-direction:column;gap:8px}
+.lab::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.18) 45%,transparent 60%);transform:translateX(-100%);animation:sweep 3.6s ease-in-out infinite}
+@keyframes sweep{60%,100%{transform:translateX(100%)}}
+.lab .tag{align-self:flex-start;font:600 10.5px var(--f-mono);letter-spacing:.14em;padding:4px 9px;border-radius:999px;background:color-mix(in srgb,var(--neon) 16%,transparent);color:var(--neon)}
+.lab b{font:900 20px var(--f-en);font-stretch:118%;line-height:1.1}
+.lab p{margin:0;color:var(--muted);font-size:13.5px}
+.lab .ar{color:var(--ink);font-size:13px}
+.lab .blur{margin-top:auto;height:44px;border-radius:12px;background:repeating-linear-gradient(90deg,var(--line) 0 30px,transparent 30px 36px);filter:blur(3px)}
+@media (max-width:980px){.lab-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.lab-grid{grid-template-columns:1fr}}
+
+/* modal for an idea */
+.modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:calc(14px + env(safe-area-inset-top,0px)) max(14px,env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(12px)}
+.modal .stage{width:min(1080px,100%);max-height:calc(100vh - 28px);overflow:auto;gap:18px;justify-content:flex-start}
+.m-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.m-head h3{margin:4px 0 0;font-size:clamp(26px,3.4vw,44px);letter-spacing:-.03em;font-weight:900;font-stretch:120%;line-height:1}
+.m-head .ar{margin:4px 0 0;color:var(--muted)}
+.xb{width:42px;height:42px;border-radius:12px;border:1px solid var(--glass-edge);background:var(--glass);cursor:pointer;font-size:16px}
+
+/* ---------- what we use ---------- */
+.uses{position:relative}
+.u-line{position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--line)}
+.u-line i{display:block;width:100%;height:100%;background:linear-gradient(var(--neon),var(--neon-2));box-shadow:0 0 16px var(--glow);transform-origin:top;transform:scaleY(0)}
+.u-list{position:relative;display:flex;flex-direction:column;gap:26px}
+.tool{position:relative;width:calc(50% - 40px);display:flex;gap:16px;align-items:center;padding:18px;border-radius:22px}
+.tool:nth-child(odd){align-self:flex-start}
+.tool:nth-child(even){align-self:flex-end}
+.tool::after{content:"";position:absolute;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--neon);box-shadow:0 0 14px var(--neon)}
+.tool:nth-child(odd)::after{right:-46px}.tool:nth-child(even)::after{left:-46px}
+.tool .tm{flex:none;width:60px;height:60px;border-radius:18px;display:grid;place-items:center;background:#fff;border:1px solid rgba(0,0,0,.06);box-shadow:0 12px 28px -12px var(--c)}
+.tool .tm svg{width:32px;height:32px}
+.tool{align-items:flex-start}
+.tool{align-items:center}
+.tool .kind{display:block;margin-top:4px;font:600 11px var(--f-mono);letter-spacing:.14em;color:var(--muted)}
+/* closing line */
+.slogan{padding-block:60px 40px;text-align:center}
+.slogan h2{margin:0;font-size:clamp(28px,5.2vw,80px);line-height:1;letter-spacing:-.04em;font-weight:900;font-stretch:125%}
+.slogan .ar{margin:18px 0 0;font-size:clamp(18px,2.4vw,26px);color:var(--muted)}
+.tool b{display:block;font:800 18px var(--f-en);font-stretch:112%}
+.tool p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.tool .ar{color:var(--ink);font-size:13.5px;margin:2px 0 0}
+.safe{margin-top:90px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.safe div{padding:18px;border-radius:20px}
+.safe b{display:block;font:800 16px var(--f-en);font-stretch:110%}
+.safe p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.safe .ar{color:var(--ink);font-size:13.5px}
+.safe i{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;margin-bottom:10px;color:var(--neon);border:1px solid var(--glass-edge);font-style:normal}
+.safe i svg{width:18px;height:18px}
+@media (max-width:760px){.u-line{left:18px}.tool{width:calc(100% - 36px);align-self:flex-end!important}.tool::after{left:-25px!important;right:auto!important}.safe{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:20px}
+.panel{border-radius:30px;padding:30px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel h2{margin:0;font-size:clamp(40px,6vw,84px);line-height:.92;letter-spacing:-.04em;font-weight:900;font-stretch:122%}
+.panel .ar{margin:0;color:var(--muted)}
+.cline{display:flex;align-items:center;gap:14px;padding:16px;border-radius:18px;border:1px solid var(--line);background:var(--glass);text-decoration:none;min-width:0;transition:border-color .25s,box-shadow .25s}
+a.cline:hover{border-color:var(--neon);box-shadow:0 0 30px -12px var(--glow)}
+.cline i{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:#fff;background:var(--c,var(--neon))}
+.cline i svg{width:20px;height:20px}
+.cline div{flex:1;min-width:0}
+.cline small{display:block;font:500 11px var(--f-mono);letter-spacing:.12em;color:var(--muted)}
+.cline b{display:block;font-weight:600;overflow-wrap:anywhere}
+.cline .go{font:700 12px var(--f-mono);color:var(--neon)}
+.soon{font:600 11px var(--f-mono);color:var(--bad)}
+footer{padding-block:34px;text-align:center;font:500 11px var(--f-mono);letter-spacing:.24em;color:var(--muted)}
+
+.cring{position:fixed;top:0;left:0;z-index:90;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1.5px solid var(--neon);pointer-events:none;transition:width .25s,height .25s,margin .25s,background .25s;display:none}
+.cring.big{width:58px;height:58px;margin:-29px 0 0 -29px;background:color-mix(in srgb,var(--neon) 12%,transparent)}
+@media (hover:hover) and (pointer:fine){.cring{display:block}}
+
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;gap:26px}
+  .hero-h{order:-1;width:min(60vw,250px);justify-self:center}
+  .hero h1{min-height:0}
+  .duo{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:460px;width:100%;justify-self:center;padding:14px}
+  .duo .hcard{position:relative;width:auto;inset:auto}
+  .frow{grid-template-columns:1fr;gap:40px}
+  .frow.flip .fc{order:0}
+  .p-head{grid-template-columns:1fr}
+  .jr{grid-template-columns:1fr;gap:20px}
+  .jr-dev{order:-1}
+  .contact .grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .focus{grid-template-columns:1fr}
+}
+/* nothing may push the page wider than the phone (clip keeps sticky sections working) */
+main > *{overflow-x:clip}
+.duo .hcard,.frow > *,.tool > div,.hero .wrap > *,.jr > *{min-width:0}
+.hc-name b,.tool b{overflow-wrap:anywhere}
+@media (max-width:560px){.stage{padding:16px;border-radius:22px}.finfo{padding:20px}.hc-name b{font-size:11px}}
+@media (prefers-reduced-motion:reduce){.hcard::before,.hc-photo .scan{animation:none}}
+</style>
+
+<script>
+/* pick the colour mode before the first paint: dark unless the visitor chose light */
+try { document.documentElement.dataset.mode = JSON.parse(localStorage.getItem('hindawy-v7') || '{}').mode === 'light' ? 'light' : 'dark'; }
+catch (e) { document.documentElement.dataset.mode = 'dark'; }
+</script>
+<div class="atmo" aria-hidden="true"></div>
+<div class="cring" aria-hidden="true"></div>
+
+<header class="top" id="top">
+  <div class="top-in">
+    <a class="brand" href="#hero" aria-label="HINDAWY home">
+      <span class="wm" aria-hidden="true"><span class="typ" id="wmTyp">hindawy</span><span class="u">_</span></span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <span class="pip" id="pip"></span>
+      <a href="#team" data-ar="<i>01</i>الفريق"><i>01</i>Team</a><a href="#work" data-ar="<i>02</i>شغلنا"><i>02</i>Work</a><a href="#build" data-ar="<i>03</i>بنبني إيه"><i>03</i>What we build</a><a href="#uses" data-ar="<i>04</i>أدواتنا"><i>04</i>Tools</a>
+    </nav>
+    <div class="tools">
+      <button class="ib lang" type="button" id="langBtn" aria-label="عربي">ع</button>
+      <button class="ib" type="button" id="modeBtn" aria-label="Dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <a class="talk" href="#contact" data-ar="تواصل معانا">Contact us</a>
+      <button class="ib burger" type="button" id="burger" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="menu" id="menu" hidden aria-label="Menu">
+  <button class="ib x" type="button" id="menuX" aria-label="Close menu">✕</button>
+  <a href="#team" data-ar="<i>01</i>الفريق"><i>01</i>Team</a><a href="#work" data-ar="<i>02</i>شغلنا"><i>02</i>Work</a><a href="#build" data-ar="<i>03</i>بنبني إيه"><i>03</i>What we build</a><a href="#uses" data-ar="<i>04</i>أدواتنا"><i>04</i>Tools</a><a href="#contact" data-ar="<i>05</i>تواصل"><i>05</i>Contact</a></nav>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <div class="prompt">&gt; <b>hindawy</b> --start</div>
+        <h1 id="typed" aria-label="Take it easy. We’ve got the rest." data-ar='خليك مرتاح، <span class="hl">والباقي علينا.</span>'>Take it easy. <span class="hl">We’ve got the rest.</span></h1>
+        <p class="goal" id="goal"><i></i>OUR GOAL <span>→</span> <b>a unicorn company.</b></p>
+        <p class="sub en read" id="heroSub">Run your business the easy way. We turn how you work into systems, automations and AI that carry the load for you. Just talk to us.</p>
+        <p class="ar read" id="heroAr">شغّل بيزنسك بسهولة: بنحوّل طريقة شغلك لأنظمة وأتمتة وذكاء اصطناعي يشيلوا عنك الحمل. كلّمنا بس، والباقي علينا.</p>
+        <div class="cta">
+          <a class="btn magnetic" href="#work" data-ar="شوف شغلنا">See our work</a>
+          <a class="btn solid magnetic" href="#contact" data-ar="تواصل معانا">Let’s talk</a>
+        </div>
+      </div>
+      <div class="duo" id="duo"></div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="team">
+    <div class="shead">
+      <div><span class="label" data-ar="المؤسسين">The founders</span><h2 data-ar="أخوين.<br>وشركة واحدة.">Two brothers.<br>One studio.</h2></div>
+      <p class="ar">أخوين بيبنوا أنظمة وأتمتة وذكاء اصطناعي للمدارس والسناتر والشركات والمصانع.</p>
+    </div>
+    <div id="founders"></div>
+  </section>
+
+  <!-- the flagship: an ERP for the whole company, with its story, demo and the owner's dashboard -->
+  <section class="proj erp" id="work">
+    <div class="wrap p-in">
+      <div class="p-head">
+        <div><span class="erp-badge"><i></i>FLAGSHIP · HINDAWY ERP</span><h2 data-ar="بيزنسك كله،<br>في شاشة واحدة.">Your whole business.<br>One screen.</h2>
+          <span class="ar-t">لازم تشوف بيزنسك بيعمل إيه، وانت قاعد في البيت.</span></div>
+        <div class="modes" role="group" aria-label="View" data-p="0"><button type="button" data-m="how" aria-pressed="true" data-ar="شوف بيتستخدم إزاي<small>See how it’s used</small>">See how it’s used<small>شوف بيتستخدم إزاي</small></button><button type="button" data-m="demo" aria-pressed="false" data-ar="جرّب بنفسك<small>Try the demo</small>">Try the demo<small>جرّب بنفسك</small></button></div>
+      </div>
+      <p class="erp-lead en">You should know what your business is doing right now, even from your couch. Our ERP runs the whole company in one system: from the raw material entering the factory, through production, the warehouse and sales, all the way to the money in the bank.</p>
+      <p class="erp-lead ar">بنعمل ERP بيدير الشركة كلها في سيستم واحد: من أول الخامة اللي داخلة المصنع، للتصنيع، للمخزن، للمبيعات، لحد الفلوس اللي دخلت البنك. وانت شايف كل ده من موبايلك وانت في البيت.</p>
+      <div class="stage glass" id="stage-0"></div>
+
+      <div class="erp-view">
+        <div class="erp-dash glass">
+          <div class="ed-bar"><i></i><i></i><i></i><span>لوحة صاحب الشركة · النهارده 10:42 ص</span><em>● LIVE</em></div>
+          <div class="ed-body" dir="rtl">
+            <aside><b>الرئيسية</b><span>التصنيع</span><span>المخازن</span><span>المشتريات</span><span>المبيعات</span><span>الحسابات</span><span>الموظفين</span><span>العملاء</span><span>التقارير</span></aside>
+            <div class="ed-main">
+              <div class="ed-kpis">
+                <div><small>مبيعات النهارده</small><b>284,500 ج</b><em class="up">▲ 12% عن امبارح</em></div>
+                <div><small>أوامر إنتاج شغالة</small><b>18</b><em>3 هيخلصوا النهارده</em></div>
+                <div><small>قيمة المخزون</small><b>3.2 مليون ج</b><em class="warn">14 صنف قرّب يخلص</em></div>
+                <div><small>الكاش في البنك</small><b>1.46 مليون ج</b><em>ليك عند العملاء 620 ألف</em></div>
+              </div>
+              <div class="ed-row">
+                <div class="ed-card"><small>المبيعات آخر 12 شهر (ألف ج)</small>
+                  <div class="ed-bars"><i style="height:38%"></i><i style="height:44%"></i><i style="height:41%"></i><i style="height:52%"></i><i style="height:58%"></i><i style="height:55%"></i><i style="height:63%"></i><i style="height:70%"></i><i style="height:66%"></i><i style="height:78%"></i><i style="height:86%"></i><i class="now" style="height:94%"></i></div>
+                  <div class="ed-axis"><span>نوفمبر</span><span>أكتوبر</span></div></div>
+                <div class="ed-card"><small>خطوط الإنتاج دلوقتي</small>
+                  <div class="ed-line"><span>خط 1 · قص وتشكيل</span><b>94%</b><i style="--w:94%"></i></div>
+                  <div class="ed-line"><span>خط 2 · لحام</span><b>81%</b><i style="--w:81%"></i></div>
+                  <div class="ed-line"><span>خط 3 · دهان</span><b>67%</b><i style="--w:67%"></i></div>
+                  <div class="ed-line"><span>خط 4 · تغليف</span><b>88%</b><i style="--w:88%"></i></div></div>
+              </div>
+              <div class="ed-card"><small>آخر حركة في الشركة</small>
+                <div class="ed-log"><span>10:41</span><p>فاتورة #8812 لشركة النور للتوريدات</p><b>148,000 ج</b></div>
+                <div class="ed-log"><span>10:36</span><p>المخزن استلم 12 طن صاج من مورد الحديد</p><b>212,000 ج</b></div>
+                <div class="ed-log"><span>10:20</span><p>أمر تشغيل #2241: اتعمل 214 من 350 دولاب</p><b>61%</b></div>
+                <div class="ed-log"><span>09:58</span><p>الحضور: 46 من 48 موظف · 2 إجازة</p><b>96%</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="erp-phone" dir="rtl">
+          <div class="ep-top"><b>من البيت 🏠</b><small>10:43 م</small></div>
+          <div class="ep-n"><i>🧾</i><p><b>فاتورة جديدة</b>شركة النور · 148,000 ج</p></div>
+          <div class="ep-n warn"><i>⚠️</i><p><b>الصاج هيخلص خلال 4 أيام</b>اطلب من المورد بضغطة</p></div>
+          <div class="ep-n ok"><i>✓</i><p><b>خط 1 خلّص أمر #2239</b>350 قطعة دخلت المخزن</p></div>
+          <div class="ep-n"><i>📊</i><p><b>تقرير اليوم</b>صافي الربح النهارده 61,300 ج</p></div>
+        </div>
+      </div>
+
+      <div class="erp-flow">
+        <div><b>المورد</b><small>Supplier</small></div><span>→</span>
+        <div><b>المشتريات</b><small>Purchasing</small></div><span>→</span>
+        <div><b>المخازن</b><small>Warehouse</small></div><span>→</span>
+        <div><b>التصنيع</b><small>Manufacturing</small></div><span>→</span>
+        <div><b>المبيعات</b><small>Sales</small></div><span>→</span>
+        <div><b>الحسابات</b><small>Accounting</small></div><span>→</span>
+        <div class="end"><b>موبايلك</b><small>Your phone</small></div>
+      </div>
+
+      <div class="roles-grid">
+        <div class="role glass"><b data-ar="التصنيع<small>Manufacturing</small>">Manufacturing<small>التصنيع</small></b><ul class="ar"><li>أوامر تشغيل ومراحل الإنتاج</li><li>تكلفة كل قطعة والهالك</li><li>كل خط إنتاج لحظة بلحظة</li></ul></div>
+        <div class="role glass"><b data-ar="المخازن<small>Inventory</small>">Inventory<small>المخازن</small></b><ul class="ar"><li>رصيد كل صنف في كل مخزن</li><li>تنبيه قبل ما الخامة تخلص</li><li>جرد بالباركود</li></ul></div>
+        <div class="role glass"><b data-ar="المشتريات<small>Purchasing</small>">Purchasing<small>المشتريات</small></b><ul class="ar"><li>طلبات شراء وموافقات</li><li>مقارنة أسعار الموردين</li><li>المستحق لكل مورد</li></ul></div>
+        <div class="role glass"><b data-ar="المبيعات<small>Sales</small>">Sales<small>المبيعات</small></b><ul class="ar"><li>عروض أسعار وفواتير</li><li>متابعة التحصيل</li><li>فاتورة إلكترونية</li></ul></div>
+        <div class="role glass"><b data-ar="الحسابات<small>Accounting</small>">Accounting<small>الحسابات</small></b><ul class="ar"><li>القيود بتتعمل لوحدها من كل حركة</li><li>البنوك والخزنة</li><li>المكسب والخسارة لحظيًا</li></ul></div>
+        <div class="role glass"><b data-ar="الموظفين<small>HR & Payroll</small>">HR & Payroll<small>الموظفين والمرتبات</small></b><ul class="ar"><li>حضور وانصراف</li><li>إجازات وسلف</li><li>المرتبات بتتحسب لوحدها</li></ul></div>
+        <div class="role glass"><b data-ar="العملاء<small>CRM</small>">CRM<small>العملاء</small></b><ul class="ar"><li>كل عميل وتاريخه معاك</li><li>متابعة الصفقات</li><li>رسايل واتساب أوتوماتيك</li></ul></div>
+        <div class="role glass"><b data-ar="التقارير<small>Owner reports</small>">Owner reports<small>التقارير لصاحب الشركة</small></b><ul class="ar"><li>كل الأرقام على موبايلك</li><li>تقرير يومي على الواتساب</li><li>مقارنة الشهور والفروع</li></ul></div>
+      </div>
+
+      <div class="p-story">
+        <div><b data-ar="قبل">Before</b><p>To know how things were going, the owner had to visit the factory and ask every department. The numbers lived in notebooks and scattered sheets.</p><p class="ar">عشان تعرف الشغل ماشي إزاي كان لازم تروح المصنع وتسأل كل قسم، والأرقام في دفاتر وشيتات متفرقة.</p></div>
+        <div><b data-ar="بنعمل إيه">What we build</b><p>One connected system: every move in one department updates all the others by itself.</p><p class="ar">سيستم واحد مربوط ببعضه: أي حركة في قسم بتحدّث باقي الأقسام لوحدها.</p></div>
+        <div><b data-ar="بعد">After</b><p>You know where your company stands in a second, from your phone. Faster decisions, less waste, no surprises.</p><p class="ar">تعرف وضع شركتك في ثانية من موبايلك. قرارات أسرع، وهالك أقل، ومفيش مفاجآت.</p></div>
+        <div class="safe-box"><b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></i><span data-ar="الأمان">Security</span></b><p>Every employee gets permissions that match their job. Every action is logged with who did it and when, and the data is backed up every day.</p><p class="ar">كل موظف ليه صلاحيات على قد شغله، وكل حركة متسجلة باسم اللي عملها ووقتها، ونسخة احتياطية كل يوم.</p></div>
+      </div>
+
+      <div class="p-cta glass"><div><b data-ar="عايز تشوف شركتك كده؟">Want to see your company like this?</b><p class="ar">كلّمنا ونبني الـ ERP على مقاس شغلك.</p></div><div class="cta"><a class="btn" href="#contact" data-ar="ابدأ مشروعك">Start a project</a><a class="btn solid" href="#contact" data-ar="كلّمنا">Talk to us</a></div></div>
+    </div>
+  </section>
+
+  <div id="projList"></div>
+
+  <section class="build" id="build">
+    <div class="build-pin">
+      <div class="build-head"><div class="wrap">
+        <div><span class="label" data-ar="بنبني إيه">What we build</span><h2 data-ar="أفكار بمستوى عالمي،<br>لناس حقيقيين.">World-class ideas,<br>built for real users.</h2></div>
+        <p class="ar">بنبني مشاريع وبرامج وأفكار بمستوى عالمي، وبنطوّرها باستمرار. كل فكرة هنا ليها مستخدم حقيقي. اضغط على أي فكرة وشوف هيستخدمها إزاي.</p>
+      </div></div>
+      <div id="engine" aria-hidden="true"></div>
+      <div class="helix" id="helix"></div>
+      <div class="build-hint" data-ar="اسكرول عشان تلف · اضغط على أي فكرة">SCROLL TO SPIN · CLICK ANY IDEA</div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="uses">
+    <div class="shead">
+      <div><span class="label" data-ar="بنستخدم إيه">What we use</span><h2 data-ar="أدواتنا.">Our tools.</h2></div>
+      <p class="ar">الأدوات اللي بنبني بيها كل حاجة.</p>
+    </div>
+    <div class="uses"><div class="u-line"><i id="uLine"></i></div><div class="u-list" id="uList"></div></div>
+  </section>
+
+  <section class="sec wrap" id="lab">
+    <div class="shead">
+      <div><span class="label" data-ar="في المعمل">In the lab</span><h2 data-ar="ولسه الجاي أحلى.">More is coming.</h2></div>
+      <p class="ar read-lab">بنشتغل على أفكار جديدة تنفع الناس وتنفع مجتمعنا المصري. استنّوا اللي جاي.</p>
+    </div>
+    <div class="lab-grid">
+      <div class="lab glass"><span class="tag">PROJECT 05</span><b data-ar="قريبًا">Coming soon</b><p class="en">Something new that makes everyday life easier.</p><p class="ar">حاجة جديدة بتسهّل الحياة اليومية.</p><div class="blur"></div></div>
+      <div class="lab glass"><span class="tag">PROJECT 06</span><b data-ar="شغالين عليه">In progress</b><p class="en">An idea built to help people.</p><p class="ar">فكرة معمولة عشان تساعد الناس.</p><div class="blur"></div></div>
+      <div class="lab glass"><span class="tag">PROJECT 07</span><b data-ar="بيتبني">Being built</b><p class="en">Made in Egypt, for everyone.</p><p class="ar">معمولة في مصر، لكل الناس.</p><div class="blur"></div></div>
+      <div class="lab glass"><span class="tag">YOUR IDEA?</span><b data-ar="يلا نبنيها">Let’s build it</b><p class="en">Have an idea that helps people? Bring it to us.</p><p class="ar">عندك فكرة تنفع الناس؟ تعالى نبنيها مع بعض.</p><a class="btn" href="#contact" style="margin-top:auto;align-self:flex-start" data-ar="كلّمنا">Talk to us</a></div>
+    </div>
+  </section>
+
+  <section class="slogan wrap" aria-label="Make technology grow with you, and solve your problems.">
+    <h2 data-ar='<span class="beam">خلّي التكنولوجيا تطوّرك معاها،</span><br><span class="hl beam">وتحل مشاكلك.</span>'><span class="beam">Make technology grow with you,</span><br><span class="hl beam">and solve your problems.</span></h2>
+    <p class="ar read-lab">خلّي التكنولوجيا تطوّرك معاها، وتحل مشاكلك.</p>
+    <p class="goal" style="justify-content:center;margin-top:22px"><i></i>NEXT STOP <span>→</span> <b>a unicorn company.</b></p>
+  </section>
+
+  <section class="sec wrap contact" id="contact">
+    <div class="grid">
+      <div class="panel glass">
+        <span class="label" data-ar="تواصل">Contact</span>
+        <h2 data-ar="يلا نبني<br>مشروعك.">Let’s build<br>yours.</h2>
+        <p class="ar">كلّمنا على الإيميل أو الواتساب، أو احجز مكالمة في الوقت اللي يناسبك.</p>
+      </div>
+      <div class="panel glass">
+        <a class="cline" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ahmedelhendway0@gmail.com&amp;su=New%20project%20with%20HINDAWY" target="_blank" rel="noopener" style="--c:#0EA5E9"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i><div><small>EMAIL</small><b id="mail">ahmedelhendway0@gmail.com</b></div><span class="go" id="copyMail" role="button" tabindex="0">COPY</span></a>
+        <a class="cline" href="https://wa.me/201118606692?text=Hi%20HINDAWY%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener" style="--c:#16A34A"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"/></svg></i><div><small>WHATSAPP</small><b data-ar="كلّمنا على الواتساب">Chat with us</b></div><span class="go">CHAT</span></a>
+        <a class="cline" href="https://wa.me/201281301230?text=Hi%20HINDAWY%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener" style="--c:#16A34A"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"/></svg></i><div><small>WHATSAPP · LINE 2</small><b data-ar="خط تاني على الواتساب">Second line</b></div><span class="go">CHAT</span></a>
+        <div class="cline" style="--c:#6366F1"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></i><div><small>BOOK A CALL</small><b>Calendly · 30 min</b></div><span class="soon">LINK SOON</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>HINDAWY · AGENCY · © <span id="yr">2026</span></footer>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-label="Idea"><div class="stage glass" id="mstage"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+gsap.registerPlugin(ScrollTrigger);
+// always open at the top, so the opening animation is the first thing people see
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (!location.hash) window.scrollTo({ top: 0, behavior: 'instant' });
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+var root = document.documentElement;
+var $ = function(id){ return document.getElementById(id); };
+var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+var timeNow = function(){ return new Date().toLocaleTimeString('ar-EG', { hour: 'numeric', minute: '2-digit' }); };
+
+/* ---------- prefs: light by default ---------- */
+var prefs = { mode: 'dark', lang: 'en' };
+var HB = window.HB = { p: 0 };   // shared with the 3D engine: how far "What we build" has scrolled
+var onLang = [];                  // things to redraw when the language changes
+try { Object.assign(prefs, JSON.parse(localStorage.getItem('hindawy-v7') || '{}')); } catch (e) {}
+prefs.lang = 'en';                // the site always opens in English; the ع button switches for this visit only
+function save(){ try { localStorage.setItem('hindawy-v7', JSON.stringify(prefs)); } catch (e) {} }
+// the button shows where it will take you: a sun in dark mode, a moon in light mode
+var MODE_ICON = {
+  dark: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/>',
+  light: '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>'
+};
+function applyMode(){
+  if (prefs.mode !== 'light') prefs.mode = 'dark';
+  root.dataset.mode = prefs.mode;
+  var b = $('modeBtn'); b.querySelector('svg').innerHTML = MODE_ICON[prefs.mode];
+  b.setAttribute('aria-label', prefs.mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'); b.title = prefs.mode === 'dark' ? 'فاتح' : 'غامق';
+}
+applyMode();
+$('modeBtn').addEventListener('click', function(){ prefs.mode = prefs.mode === 'dark' ? 'light' : 'dark'; save(); applyMode(); });
+// the wordmark types itself once
+(function(){
+  var el = $('wmTyp'), full = 'hindawy', n = 0;
+  if (reduce) return; el.textContent = '';
+  setTimeout(function step(){ el.textContent = full.slice(0, ++n); if (n < full.length) setTimeout(step, 110); }, 300);
+})();
+/* language switch: every element with data-ar swaps to its Arabic version, and listeners redraw generated parts */
+function applyLang(onlyNew){
+  var ar = prefs.lang === 'ar';
+  root.dataset.lang = prefs.lang;
+  document.querySelectorAll('[data-ar]').forEach(function(el){
+    if (onlyNew && el.dataset.en !== undefined) return;   // already handled (and maybe animating, like the typed slogan)
+    if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
+    el.innerHTML = ar ? el.dataset.ar : el.dataset.en;
+    el.classList.toggle('is-ar', ar);
+  });
+  var b = $('langBtn'); b.textContent = ar ? 'EN' : 'ع'; b.setAttribute('aria-label', ar ? 'English' : 'عربي');
+  onLang.forEach(function(fn){ fn(); });
+}
+$('langBtn').addEventListener('click', function(){ prefs.lang = prefs.lang === 'ar' ? 'en' : 'ar'; save(); applyLang(false); });
+applyLang();
+$('yr').textContent = new Date().getFullYear();
+
+/* ---------- header: hides on scroll down, sliding pip on the active link ---------- */
+(function(){
+  var top = $('top'), last = 0;
+  addEventListener('scroll', function(){
+    var y = scrollY; top.classList.toggle('solid', y > 30);
+    top.classList.toggle('hide', y > last && y > 300 && $('menu').hidden); last = y;
+  }, { passive: true });
+  var pip = $('pip'), links = $('links');
+  function movePip(a){ if (!a) { pip.style.opacity = 0; return; } pip.style.opacity = 1; pip.style.left = a.offsetLeft + 'px'; pip.style.width = a.offsetWidth + 'px'; }
+  links.querySelectorAll('a').forEach(function(a){ a.addEventListener('mouseenter', function(){ movePip(a); }); });
+  links.addEventListener('mouseleave', function(){ movePip(links.querySelector('a.on')); });
+  // wait until the project sections exist before watching them
+  setTimeout(function(){
+    [['team','team'],['work','work'],['build','build'],['uses','uses'],['contact','contact']].forEach(function(x){
+      var end = x[0] === 'work' ? document.querySelectorAll('.proj')[document.querySelectorAll('.proj').length - 1] : '#' + x[0];
+      ScrollTrigger.create({ trigger: '#' + x[0], endTrigger: end, start: 'top 55%', end: 'bottom 45%', onToggle: function(st){
+        var a = links.querySelector('a[href="#' + x[1] + '"]'); if (!a) return; a.classList.toggle('on', st.isActive); movePip(links.querySelector('a.on')); } });
+    });
+  }, 0);
+  $('burger').addEventListener('click', function(){ $('menu').hidden = false; if (!reduce) gsap.from('#menu a', { y: 30, opacity: 0, stagger: .06, duration: .5, ease: 'expo.out' }); });
+  $('menuX').addEventListener('click', function(){ $('menu').hidden = true; });
+  $('menu').querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ $('menu').hidden = true; }); });
+})();
+
+/* ---------- reading effect: words light up as you go ---------- */
+function splitWords(el){
+  var words = el.textContent.trim().split(/\s+/);
+  el.innerHTML = words.map(function(w){ return '<span class="w">' + esc(w) + '</span>'; }).join(' ');
+  return el.querySelectorAll('.w');
+}
+// a beam of light runs along the line, word by word, and leaves the words lit behind it
+function beam(ws, delay){
+  var i = 0;
+  setTimeout(function step(){ if (i > 0) ws[i - 1].classList.remove('now'); if (i >= ws.length) return;
+    ws[i].classList.add('lit', 'now'); i++; setTimeout(step, 95); }, delay || 0);
+}
+function readOnTime(el, delay){ if (!reduce) beam(splitWords(el), delay); }
+// same beam, but it starts only once the text is on screen
+function readWhenSeen(el){
+  if (reduce) return; var ws = splitWords(el);
+  new IntersectionObserver(function(es, ob){ if (es[0].isIntersecting) { ob.disconnect(); beam(ws, 150); } }, { threshold: .6 }).observe(el);
+}
+
+/* ---------- hero: typed slogan, then the lines read themselves ---------- */
+var typed = $('typed');
+if (!reduce) {
+  var plain = [], tmp = document.createElement('div'); tmp.innerHTML = typed.innerHTML;
+  (function walk(node, hl){ node.childNodes.forEach(function(n){ if (n.nodeType === 3) n.textContent.split('').forEach(function(ch){ plain.push([ch, hl]); }); else walk(n, true); }); })(tmp, false);
+  typed.innerHTML = ''; typed.classList.add('caret');
+  var span = null, cur = null, ti = 0;
+  (function step(){
+    var it = plain[ti++];
+    if (it[1] !== cur || !span) { span = document.createElement('span'); if (it[1]) span.className = 'hl'; typed.appendChild(span); cur = it[1]; }
+    span.textContent += it[0];
+    if (ti < plain.length) setTimeout(step, it[0] === ' ' ? 90 : 60);
+    else setTimeout(function(){ typed.classList.remove('caret'); typed.querySelectorAll('span').forEach(function(s){ s.classList.add('beam'); }); }, 1600);
+  })();
+  gsap.from('#goal', { x: -20, opacity: 0, filter: 'blur(6px)', duration: .8, delay: 1.5, ease: 'expo.out' });
+  readOnTime($('heroSub'), 1600); readOnTime($('heroAr'), 3200);
+  gsap.from('.hero .cta', { y: 20, opacity: 0, filter: 'blur(8px)', duration: 1, delay: 2.2 });
+}
+
+/* ---------- founders: Hunter-style cards ---------- */
+var PERSON = '<svg viewBox="0 0 100 100" fill="currentColor"><circle cx="50" cy="34" r="20"/><path d="M8 100c4-26 22-40 42-40s38 14 42 40z"/></svg>';
+var FOUNDERS = [
+  { no: '001', rank: 'SS', name: 'Eng. Ahmed Hindawy', short: 'AHMED HINDAWY', role: 'Co-Founder & CEO', born: '2010-04-01',
+    roles: ['Automation Engineer', 'Front-End Developer', 'AI Engineer', 'Industrial AI'],
+    stats: [['AGE', 'auto'], ['STUDY', 'Baccalaureate'], ['BASED', 'Egypt'], ['PROJECTS', '4+']],
+    bio: 'Builds the screens people touch and the automations behind them. Started HINDAWY to give schools, centers and businesses the same quality of software big companies use.',
+    bioAr: 'بيبني الشاشات اللي الناس بتستخدمها والأتمتة اللي وراها. أسّس HINDAWY عشان يدّي المدارس والسناتر والشركات نفس مستوى البرامج اللي بتستخدمها الشركات الكبيرة.',
+    focus: [['Front-end & UX', 'الواجهات وتجربة المستخدم'], ['Automation workflows', 'أتمتة الشغل'], ['AI assistants', 'المساعدات الذكية'], ['Industrial AI', 'الذكاء الاصطناعي في المصانع']] },
+  { no: '002', rank: 'SS', name: 'Eng. Mohamed Hindawy', short: 'MOHAMED HINDAWY', role: 'Co-Founder & CEO', born: null,
+    roles: ['Automation Engineer', 'AI Engineer', 'Industrial AI', 'CS'],
+    stats: [['AGE', '18'], ['STUDY', 'CS'], ['BASED', 'Egypt'], ['FOCUS', 'AI']],
+    bio: 'Studies CS and leads the AI side: models that read data, predict problems and save hours of manual work.',
+    bioAr: 'بيدرس علوم الحاسب وماسك جانب الذكاء الاصطناعي: موديلات بتقرا البيانات وتتوقع المشاكل وتوفّر ساعات من الشغل اليدوي.',
+    focus: [['AI models', 'موديلات الذكاء الاصطناعي'], ['Industrial AI', 'الذكاء الاصطناعي في المصانع'], ['Automation', 'الأتمتة'], ['Data & systems', 'البيانات والأنظمة']] }
+];
+function age(b){ var d = new Date(b), n = new Date(), a = n.getFullYear() - d.getFullYear(); if (n.getMonth() < d.getMonth() || (n.getMonth() === d.getMonth() && n.getDate() < d.getDate())) a--; return a; }
+function hcard(f, big){
+  return '<div class="hwrap"><div class="hcard"><div class="hc-in"><div class="hc-top"><span>No.' + f.no + '</span><span class="hc-rank"><i></i><i></i><i></i></span></div>' +
+    '<div class="hc-photo"><div class="slot"><div>' + PERSON + 'PHOTO</div></div><div class="scan"></div></div>' +
+    '<div class="hc-name"><b>' + f.short + '</b><small>' + f.role.toUpperCase() + '</small></div><div class="hc-bars"><i></i><i></i><i></i><i></i><i></i></div>' +
+    '<div class="hc-foot"><span>HINDAWY</span><span>' + (big ? 'FOUNDER' : 'F-' + f.no) + '</span></div><i class="shine"></i></div><div class="slash"></div></div></div>';
+}
+$('duo').innerHTML = FOUNDERS.map(function(f){ return hcard(f, false); }).join('');
+$('founders').innerHTML = FOUNDERS.map(function(f, i){
+  return '<div class="frow' + (i % 2 ? ' flip' : '') + '"><div class="fc">' + hcard(f, true) + '</div>' +
+    '<div class="finfo glass"><span class="label">' + f.role + '</span><h3 class="fname" aria-label="' + f.name + '"><span class="eng">Engineer</span><span class="type" data-text="' + f.short + '">' + f.short + '</span></h3>' +
+    '<div class="roles">' + f.roles.map(function(r){ return '<span>' + r + '</span>'; }).join('') + '</div>' +
+    '<div class="stats">' + f.stats.map(function(s){ return '<div><small>' + s[0] + '</small><b>' + (s[1] === 'auto' ? age(f.born) : s[1]) + '</b></div>'; }).join('') + '</div>' +
+    '<p class="bio read">' + f.bio + '</p><p class="bio ar read">' + f.bioAr + '</p>' +
+    '<div class="focus">' + f.focus.map(function(x){ return '<div><b>' + x[0] + '</b><small>' + x[1] + '</small></div>'; }).join('') + '</div></div></div>';
+}).join('');
+// hero cards: each one falls on its own, and a line of light crosses it as it lands.
+// It waits until the page has fully loaded and the visitor is at the top.
+if (!reduce) (function(){
+  var cards = [].slice.call($('duo').querySelectorAll('.hwrap'));
+  gsap.set(cards, { opacity: 0 });
+  function play(){
+    var tl = gsap.timeline();
+    cards.forEach(function(c, i){
+      var at = i * .7, sl = c.querySelector('.slash');
+      tl.fromTo(c, { y: -innerHeight * .85, rotate: i ? 8 : -8, opacity: 1 }, { y: 0, rotate: 0, duration: .6, ease: 'power3.in' }, at)
+        .fromTo(c, { scale: 1.05 }, { scale: 1, duration: .6, ease: 'elastic.out(1,.45)' }, at + .6)
+        .fromTo(sl, { scaleX: 0, opacity: 1 }, { scaleX: 1, duration: .18, ease: 'power3.out' }, at + .62)
+        .to(sl, { opacity: 0, duration: .3 }, at + .82);
+    });
+  }
+  function ready(){
+    if (scrollY < innerHeight * .5) setTimeout(play, 350);
+    else ScrollTrigger.create({ trigger: '#duo', start: 'top 80%', once: true, onEnter: play });
+  }
+  if (document.readyState === 'complete') ready(); else addEventListener('load', ready);
+})();
+document.querySelectorAll('.frow').forEach(function(row, i){
+  var card = row.querySelector('.fc .hcard'), slash = card.querySelector('.slash'), info = row.querySelector('.finfo');
+  if (!reduce) gsap.set(card, { y: -700, rotate: i % 2 ? 18 : -18, opacity: 0 });
+  ScrollTrigger.create({ trigger: row, start: 'top 70%', once: true, onEnter: function(){
+    if (reduce) return;
+   
+    gsap.timeline()
+      .to(card, { y: 0, rotate: 0, opacity: 1, duration: .55, ease: 'power4.in' })
+      .fromTo(slash, { scaleX: 0, opacity: 1 }, { scaleX: 1, duration: .22, ease: 'power3.out' })
+      .to(slash, { opacity: 0, duration: .35 })
+      .fromTo(row, { x: -8 }, { x: 0, duration: .45, ease: 'elastic.out(1.2,.3)' }, '-=.55')
+      .from(info, { x: i % 2 ? -60 : 60, opacity: 0, filter: 'blur(10px)', duration: .8, ease: 'expo.out' }, '-=.4')
+      .add(function(){ typeIn(info.querySelector('.type')); });
+  }});
+});
+function typeIn(h){
+  if (h.dataset.done) return; h.dataset.done = 1;
+  var full = h.dataset.text, n = 0; h.textContent = ''; h.classList.add('caret');
+  (function step(){ h.textContent = full.slice(0, ++n);
+    if (n < full.length) setTimeout(step, 45); else { h.classList.remove('caret'); h.classList.add('lit'); } })();
+}
+document.querySelectorAll('#founders .read').forEach(readWhenSeen);
+
+/* ---------- brand icons (official marks, from Simple Icons / Devicon) ---------- */
+var EYE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+var BR = {
+  web: ['#2E9BFF', '<circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2c3 3.5 3 16.5 0 20M12 2c-3 3.5-3 16.5 0 20" fill="none" stroke="currentColor" stroke-width="2"/>'],
+  whatsapp: ['#25D366', 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z'],
+  instagram: ['#E4405F', 'M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077'],
+  tiktok: ['#000000', 'M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z'],
+  messenger: ['#0084FF', 'M.001 11.639C.001 4.949 5.241 0 12.001 0S24 4.95 24 11.639c0 6.689-5.24 11.638-12 11.638-1.21 0-2.38-.16-3.47-.46a.96.96 0 00-.64.05l-2.39 1.05a.96.96 0 01-1.35-.85l-.07-2.14a.97.97 0 00-.32-.68A11.39 11.389 0 01.002 11.64zm8.32-2.19l-3.52 5.6c-.35.53.32 1.139.82.75l3.79-2.87c.26-.2.6-.2.87 0l2.8 2.1c.84.63 2.04.4 2.6-.48l3.52-5.6c.35-.53-.32-1.13-.82-.75l-3.79 2.87c-.25.2-.6.2-.86 0l-2.8-2.1a1.8 1.8 0 00-2.61.48z'],
+  facebook: ['#0866FF', 'M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z'],
+  telegram: ['#26A5E4', 'M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z'],
+  sheets: ['#34A853', 'M11.318 12.545H7.91v-1.909h3.41v1.91zM14.728 0v6h6l-6-6zm1.363 10.636h-3.41v1.91h3.41v-1.91zm0 3.273h-3.41v1.91h3.41v-1.91zM20.727 6.5v15.864c0 .904-.732 1.636-1.636 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.318v6.5h6.5zm-3.273 2.773H6.545v7.909h10.91v-7.91zm-6.136 4.636H7.91v1.91h3.41v-1.91z'],
+  maps: ['#4285F4', 'M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z']
+};
+function brandSvg(k){ var b = BR[k], body = b[1].charAt(0) === '<' ? b[1] : '<path fill="currentColor" d="' + b[1] + '"/>'; return '<svg viewBox="0 0 24 24" style="color:' + b[0] + '" aria-hidden="true">' + body + '</svg>'; }
+var BR_NAME = { web: 'Website', whatsapp: 'WhatsApp', instagram: 'Instagram', tiktok: 'TikTok', messenger: 'Messenger', facebook: 'Facebook', telegram: 'Telegram', sheets: 'Google Sheets', maps: 'Google Maps' };
+function brands(list){ return '<span class="brands">' + list.map(function(k){ return '<i title="' + BR_NAME[k] + '">' + brandSvg(k) + '</i>'; }).join('') + '</span>'; }
+
+/* ---------- screen builders for the app mock-ups ---------- */
+var A = function(title, body, sub){ return '<div class="ua"><div class="ua-bar"><b>' + title + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '</div><div class="ua-body">' + body + '</div></div>'; };
+var R = function(a, b, cls, tap){ return '<div class="ua-row ' + (cls || '') + '"' + (tap ? ' data-tap' : '') + '><span>' + a + '</span><span>' + (b || '') + '</span></div>'; };
+var B = function(t, tap, alt){ return '<button type="button" class="ua-btn' + (alt ? ' alt' : '') + '"' + (tap ? ' data-tap' : '') + '>' + t + '</button>'; };
+var C = function(k, v){ return '<div class="ua-card"><small>' + k + '</small><b>' + v + '</b></div>'; };
+var G = function(){ return '<div class="ua-grid">' + [].join.call(arguments, '') + '</div>'; };
+var M = function(t, me){ return '<div class="ua-msg' + (me ? ' me' : '') + '">' + t + '</div>'; };
+var T = function(t){ return '<div class="ua-toast">' + t + '</div>'; };
+var N = function(t){ return '<div class="ua-note">' + t + '</div>'; };
+var BARS = function(arr){ return '<div class="ua-bars">' + arr.map(function(h){ return '<i style="height:' + h + '%"></i>'; }).join('') + '</div>'; };
+var NAMES = ['محمد أحمد','يوسف علي','عمر خالد','مريم حسن','سارة محمود','أحمد سمير','نور الدين','حبيبة طارق','زياد إبراهيم','ملك عادل','كريم مصطفى','جنى وليد','آدم شريف','فرح ياسر'];
+// a small data table inside a phone or browser screen
+var TBL = function(head, rows){ return '<table class="ua-tbl"><thead><tr>' + head.map(function(h){ return '<th>' + h + '</th>'; }).join('') + '</tr></thead><tbody>' +
+  rows.map(function(r){ return '<tr>' + r.map(function(c){ return '<td>' + c + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>'; };
+// a screen with its own colour (used for the social apps)
+var AX = function(color, title, body, sub, chatBg){ return '<div class="ua" style="--app:' + color + (chatBg ? ';background:' + chatBg : '') + '"><div class="ua-bar"><b>' + title + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '</div><div class="ua-body">' + body + '</div></div>'; };
+var NAMEGRID = function(abs, tapIdx){ return '<div class="ua-names">' + NAMES.map(function(n, i){ return '<span' + (abs.indexOf(i) > -1 ? ' class="abs"' : '') + (i === tapIdx ? ' data-tap' : '') + '>' + n + '</span>'; }).join('') + '</div>'; };
+
+/* ---------- journey: how a real user uses it (auto, or step-by-step "try it") ---------- */
+function journey(el, cfg, interactive){
+  el.innerHTML = '<div class="jr' + (interactive ? ' try' : '') + '"><div class="jr-words"><span class="label">' + cfg.user + '</span><h4></h4><p class="ar"></p><div class="jr-note" hidden><i>' + EYE + '</i><div><b></b><p class="ar"></p></div></div><div class="dots">' +
+    cfg.scenes.map(function(){ return '<i></i>'; }).join('') + '</div>' + (interactive ? '<p class="hint">TAP THE GLOWING BUTTON · اضغط على الحاجة اللي بتنوّر</p>' : '') + '</div>' +
+    '<div class="jr-dev ' + cfg.device + '"><div class="screen" style="--app:' + cfg.color + '"></div><i class="tapdot"></i></div></div>';
+  var h4 = el.querySelector('h4'), ar = el.querySelector('.jr-words > .ar'), scr = el.querySelector('.screen'), dev = el.querySelector('.jr-dev'), dot = el.querySelector('.tapdot'), dots = el.querySelectorAll('.dots i');
+  var calls = [], idx = 0, dead = false;
+  // every step waits while the animation is off screen, so it pauses (and stays silent) the moment you scroll away
+  var later = function(s, fn){
+    var c = gsap.delayedCall(s, function tick(){ if (dead) return; if (!seen) { calls.push(gsap.delayedCall(.3, tick)); return; } fn(); });
+    calls.push(c);
+  };
+  // the animation plays only while the visitor is actually looking at it (most of it on screen)
+  var seen = false, io = new IntersectionObserver(function(es){
+    var e = es[0], need = Math.min(e.boundingClientRect.height, innerHeight) * .6;
+    seen = e.isIntersecting && e.intersectionRect.height >= need;
+  }, { threshold: [0, .2, .4, .5, .6, .7, .8, 1] });
+  io.observe(el);
+  function show(i){
+    idx = i; var sc = cfg.scenes[i];
+    dots.forEach(function(d, j){ d.classList.toggle('on', j <= i); });
+    // the big line is in the visitor's language, the small line in the other one
+    var isAr = prefs.lang === 'ar', big = isAr ? sc.ar : sc.en, small = isAr ? sc.en : sc.ar;
+    h4.classList.toggle('is-ar', isAr); h4.dir = isAr ? 'rtl' : 'ltr';
+    h4.innerHTML = big.split(' ').map(function(w){ return '<span>' + w + '</span>'; }).join(' ');
+    ar.className = isAr ? 'en' : 'ar'; ar.textContent = small; scr.innerHTML = sc.s;
+    var note = el.querySelector('.jr-note');
+    note.hidden = !sc.note;
+    if (sc.note) { note.querySelector('b').textContent = sc.note[0]; note.querySelector('.ar').textContent = sc.note[1]; if (!reduce) gsap.fromTo(note, { x: -14, opacity: 0 }, { x: 0, opacity: 1, duration: .5, delay: .45 }); }
+    if (!reduce) {
+      gsap.fromTo(h4.children, { y: 26, opacity: 0, filter: 'blur(10px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: .6, stagger: .06, ease: 'expo.out' });
+      gsap.fromTo(ar, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: .5, delay: .3 });
+      gsap.fromTo(scr.querySelectorAll('.ua-body > *'), { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: .45, stagger: .06, delay: .1 });
+    }
+    var target = scr.querySelector('[data-tap]');
+    if (interactive) {
+      if (target) target.addEventListener('click', function(){ target.classList.add('pressed'); later(.25, function(){ next(); }); }, { once: true });
+      else later(2.6, function(){ if (i < cfg.scenes.length - 1) next(); });
+      if (i === cfg.scenes.length - 1) later(1.2, function(){ ar.insertAdjacentHTML('afterend', '<button type="button" class="btn ghost" style="align-self:flex-start">↺ Try again · جرّب تاني</button>'); el.querySelector('.jr-words .btn').addEventListener('click', function(){ el.querySelector('.jr-words .btn').remove(); show(0); }); });
+      return;
+    }
+    if (target) later(1.7, function(){
+      var r = target.getBoundingClientRect(), d = dev.getBoundingClientRect();
+      gsap.set(dot, { x: d.width * .5, y: d.height * .95, opacity: 0 });
+      gsap.to(dot, { x: r.left - d.left + r.width / 2, y: r.top - d.top + r.height / 2, opacity: 1, duration: .7, ease: 'power3.inOut', onComplete: function(){
+        target.classList.add('pressed'); gsap.fromTo(dot, { scale: 1 }, { scale: .7, yoyo: true, repeat: 1, duration: .12 }); later(.6, function(){ gsap.to(dot, { opacity: 0, duration: .2 }); next(); });
+      } });
+    });
+    else later(3.4, next);
+  }
+  function next(){ show((idx + 1) % cfg.scenes.length); }
+  show(0);
+  return function(){ dead = true; io.disconnect(); calls.forEach(function(c){ c.kill(); }); };
+}
+
+/* ================= FULL DEMOS ================= */
+function demoHader(el){
+  var tab = 'teacher', abs = { 4: 1, 8: 1 }, sent = false, warned = {};
+  el.innerHTML = '<div class="tabs" role="group">' + [['teacher','المدرس'],['raed','رائد الفصل'],['affairs','شؤون الطلاب'],['admin','المدير'],['student','الطالب'],['parent','ولي الأمر']].map(function(t){ return '<button type="button" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join('') +
+    '</div><div class="dphone"><div class="screen" id="hdr" style="--app:#0F766E"></div></div><p class="dnote">Simplified demo · sample names · نسخة تجريبية ببيانات وهمية</p>';
+  function draw(){
+    el.querySelectorAll('[data-t]').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.t === tab); });
+    var s = $('hdr'), out = Object.keys(abs).filter(function(k){ return abs[k]; }).length, body;
+    if (tab === 'teacher') body = R('فصل 3/2', 'الحصة الأولى') + '<p style="margin:2px 0;color:#64748B;font-size:11px;text-align:center">اضغط على الغايب بس، والباقي حاضر.</p><div class="ua-names">' +
+      NAMES.map(function(n, i){ return '<button type="button" data-n="' + i + '" class="' + (abs[i] ? 'abs' : '') + '">' + n + '</button>'; }).join('') + '</div>' + R('حاضر ' + (NAMES.length - out), 'غائب ' + out) + B(sent ? 'اتبعت ✓ للرائد وشؤون الطلاب' : 'إرسال الغياب', false);
+    else if (tab === 'raed') body = R('فصل 3/2 · النهارده', sent ? '<span class="s-done" style="padding:2px 8px;border-radius:999px">وصل</span>' : 'مستني المدرس') +
+      NAMES.map(function(n, i){ return abs[i] ? R(n, 'غائب · الحصة 1', 'bad') : ''; }).join('') + N('الرائد بيتابع فصله ويتأكد إن الغياب مظبوط قبل ما يروح لشؤون الطلاب.') + B('تأكيد الكشف');
+    else if (tab === 'affairs') body = R('طلاب غيابهم متكرر', 'الأسبوع ده') + [['يوسف علي · 3/2', 4], ['عمر خالد · 1/4', 5], ['زياد إبراهيم · 3/2', 3], ['جنى وليد · 2/1', 3], ['ملك عادل · 2/3', 3], ['سارة محمود · 3/2', 3]].map(function(x, i){ return '<div class="ua-row"><span>' + x[0] + ' · ' + x[1] + ' أيام</span><button type="button" data-w="' + i + '" class="' + (warned[i] ? 's-done' : 's-late') + '">' + (warned[i] ? 'اتبعت ✓' : 'تنبيه') + '</button></div>'; }).join('') + N('التنبيه بيوصل لولي الأمر برسالة فيها أيام الغياب.');
+    else if (tab === 'admin') body = G(C('الحضور النهارده', '94.2%'), C('غياب', String(36 + out)), C('فصول بعتت', sent ? '24 / 24' : '23 / 24'), C('تنبيهات اتبعتت', String(11 + Object.keys(warned).length))) +
+      TBL(['الفصل', 'الطلاب', 'غياب', 'الحضور'], [['1/1', '34', '2', '94%'], ['1/4', '33', '4', '88%'], ['2/1', '31', '3', '90%'], ['2/3', '30', '1', '97%'], ['3/2', '32', String(out), Math.round((32 - out) / 32 * 100) + '%'], ['3/5', '31', '2', '94%']]) +
+      R('لسه ما بعتش', sent ? 'كل الفصول بعتت ✓' : 'أ. منى · فصل 1/3', sent ? 'ok' : 'bad');
+    else if (tab === 'student') body = G(C('حضرت', '61 يوم'), C('غبت', '3 أيام'), C('متبقي للحد', '12 يوم'), C('الإنذارات', 'لا يوجد')) +
+      TBL(['اليوم', 'الحالة'], [['الأحد', '✓ حاضر'], ['الإثنين', '✓ حاضر'], ['الثلاثاء', '✗ غائب (الحصة 1)'], ['الأربعاء', '✓ حاضر'], ['الخميس', '✓ حاضر']]);
+    else body = N('🔔 ابنك زياد إبراهيم غاب الحصة الأولى النهارده (8:21 ص).') + G(C('حضور الترم', '61 / 64'), C('غياب', '3 أيام'), C('الحد', '15 يوم'), C('الإنذارات', 'لا يوجد')) + B('التواصل مع شؤون الطلاب');
+    s.innerHTML = A({ teacher: 'حاضر · المدرس', raed: 'حاضر · الرائد', affairs: 'شؤون الطلاب', admin: 'لوحة المدير', student: 'حاضر · الطالب', parent: 'حاضر · ولي الأمر' }[tab], body, 'مدرسة النموذج');
+    s.querySelectorAll('[data-n]').forEach(function(b){ b.addEventListener('click', function(){ abs[b.dataset.n] = !abs[b.dataset.n]; sent = false; draw(); }); });
+    s.querySelectorAll('[data-w]').forEach(function(b){ b.addEventListener('click', function(){ warned[b.dataset.w] = 1; draw(); }); });
+    var send = s.querySelector('.ua-btn');
+    if (send && tab === 'teacher') send.addEventListener('click', function(){ sent = true; draw(); });
+    if (send && tab === 'raed') send.addEventListener('click', function(){ send.textContent = 'اتأكد ✓'; });
+  }
+  el.querySelectorAll('[data-t]').forEach(function(b){ b.addEventListener('click', function(){ tab = b.dataset.t; draw(); }); });
+  draw();
+}
+function demoCenter(el){
+  var role = 'assistant', checkins = [['1043', 'ياسين محمود', '٤:٠٢ م']], group = [['يوسف علي', 1, 18], ['مريم حسن', 1, 20], ['زياد إبراهيم', 0, ''], ['جنى وليد', 1, 17]];
+  el.innerHTML = '<div class="tabs" role="group">' + [['owner','صاحب السنتر'],['assistant','أسيستنت'],['teacher','مدرس'],['student','طالب'],['parent','ولي أمر']].map(function(t){ return '<button type="button" data-r="' + t[0] + '">' + t[1] + '</button>'; }).join('') +
+    '</div><div class="dweb"><div class="screen" id="ctr" style="--app:#1D4ED8"></div></div><p class="dnote">Simplified demo · sample data · نسخة تجريبية ببيانات وهمية</p>';
+  function draw(){
+    el.querySelectorAll('[data-r]').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.r === role); });
+    var s = $('ctr'), body;
+    if (role === 'owner') body = G(C('الطلاب', '248'), C('دخل الشهر', '71,200 ج'), C('الحضور', '92%'), C('متأخرين في الدفع', '14')) +
+      '<b style="font-size:12px">الدخل آخر 10 شهور</b>' + BARS([48, 55, 61, 58, 70, 76, 82, 88, 94, 100]) +
+      '<b style="font-size:12px">المجموعات</b>' + TBL(['المجموعة', 'المدرس', 'القاعة', 'طلاب', 'حضور'], [['فيزياء 3ث · السبت 6م', 'أ. أحمد', 'A', '35', '94%'], ['كيمياء 2ث · الأحد 4م', 'أ. سامح', 'B', '28', '89%'], ['رياضيات 3ث · الإثنين 5م', 'أ. هبة', 'A', '41', '91%'], ['إنجليزي 1ث · الثلاثاء 7م', 'أ. منى', 'C', '33', '96%']]) +
+      '<b style="font-size:12px">حسابات المدرسين</b>' + TBL(['المدرس', 'الدخل', 'النسبة', 'المستحق'], [['أ. أحمد', '24,500', '60%', '14,700'], ['أ. سامح', '14,000', '55%', '7,700'], ['أ. هبة', '18,450', '60%', '11,070']]) +
+      G(C('المصاريف', '9,400 ج'), C('الصافي', '23,380 ج')) + R('عمر خالد · كيمياء 2ث', '<span class="s-late" style="padding:2px 8px;border-radius:999px">عليه 350 ج</span>');
+    else if (role === 'assistant') body = '<b style="font-size:12px">تسجيل حضور بالكود</b><div class="ua-in"><input id="cCode" value="1057" inputmode="numeric" aria-label="كود الطالب"><button type="button" class="ua-btn" id="cGo">تسجيل</button></div>' + checkins.map(function(c){ return R(c[1] + ' · #' + c[0], c[2], 'ok'); }).join('');
+    else if (role === 'teacher') body = '<b style="font-size:12px">تالتة ثانوي · امتحان الفصل الأول</b>' + group.map(function(g, i){ return '<div class="ua-row"><span>' + g[0] + '</span><span style="display:flex;gap:6px;align-items:center"><button type="button" data-g="' + i + '" class="' + (g[1] ? 's-in' : 's-out') + '">' + (g[1] ? 'حاضر' : 'غايب') + '</button><b style="font-family:var(--f-en)">' + (g[2] === '' ? '—' : g[2] + '/20') + '</b></span></div>'; }).join('') + B('حفظ وإرسال الدرجات');
+    else if (role === 'student') body = R('فيزياء · السبت ٦ م', 'الحصة الجاية') + G(C('آخر امتحان', '18/20'), C('الحضور', '11/12')) + BARS([70, 85, 60, 90, 95]);
+    else body = G(C('حضور ابنك', '11/12'), C('آخر امتحان', '18/20'), C('الشهر ده', 'مدفوع ✓')) + M('رسالة من المدرس: مستوى زياد بيتحسن، محتاج يراجع الفصل التالت.');
+    s.innerHTML = A('سيستم السنتر', body, { owner: 'صاحب السنتر', assistant: 'الأسيستنت', teacher: 'المدرس', student: 'الطالب', parent: 'ولي الأمر' }[role]);
+    s.querySelectorAll('[data-g]').forEach(function(b){ b.addEventListener('click', function(){ var g = group[b.dataset.g]; g[1] = g[1] ? 0 : 1; draw(); }); });
+    var go = $('cGo');
+    if (go) go.addEventListener('click', function(){ var code = $('cCode').value.replace(/\D/g, '').slice(0, 6) || '1057', pool = ['ملك عادل', 'آدم شريف', 'نور الدين', 'حبيبة طارق'];
+      checkins.unshift([code, pool[checkins.length % pool.length], timeNow()]); draw(); $('cCode').value = String(+code + 1); });
+    var sv = s.querySelector('.ua-btn:not(#cGo)');
+    if (sv && role === 'teacher') sv.addEventListener('click', function(){ sv.textContent = 'اتحفظ ✓ وأولياء الأمور وصلهم الدرجات'; });
+  }
+  el.querySelectorAll('[data-r]').forEach(function(b){ b.addEventListener('click', function(){ role = b.dataset.r; draw(); }); });
+  draw();
+}
+function demoTeacher(el){
+  var size = 'phone', tab = 'teacher', att = [1, 1, 0, 1, 1], quiz = ['9', '8', '', '10', '7'];
+  var kids = ['مالك سامح', 'ليلى عمرو', 'حمزة طارق', 'تاليا محمد', 'سليم وائل'];
+  el.innerHTML = '<div class="sizes" role="group" aria-label="Screen size"><button type="button" data-s="phone">Phone</button><button type="button" data-s="tablet">Tablet</button><button type="button" data-s="desktop">Desktop</button></div>' +
+    '<div class="tabs" role="group">' + [['teacher','المدرس'],['assistant','الأسيستنت'],['student','الطالب'],['parent','ولي الأمر']].map(function(t){ return '<button type="button" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div>' +
+    '<div class="frame" id="tfr"><div class="ua" id="tch" style="--app:#4338CA"></div></div><p class="dnote">Same system on every screen · نفس النظام على أي شاشة · بيانات وهمية</p>';
+  var W = { phone: '300px', tablet: '520px', desktop: '100%' };
+  function draw(){
+    el.querySelectorAll('[data-s]').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.s === size); });
+    el.querySelectorAll('[data-t]').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.t === tab); });
+    $('tfr').style.width = W[size];
+    var body;
+    if (tab === 'teacher') body = '<b style="font-size:12px">حصة تالتة إعدادي · الحضور والكويز</b>' + kids.map(function(k, i){ return '<div class="ua-row"><span>' + k + '</span><span style="display:flex;gap:6px;align-items:center"><input aria-label="درجة الكويز" data-q="' + i + '" value="' + quiz[i] + '" style="width:44px;border:1px solid #E3E8F0;border-radius:8px;padding:3px;text-align:center;font:12px var(--f-mono)"><button type="button" data-a="' + i + '" class="' + (att[i] ? 's-in' : 's-out') + '">' + (att[i] ? 'حاضر' : 'غايب') + '</button></span></div>'; }).join('') + B('حفظ الحصة');
+    else if (tab === 'assistant') body = G(C('اشتراكات الشهر', '42 / 50'), C('بالحصة النهارده', '6'), C('مصاريف الشهر', '1,200 ج'), C('الصافي', '9,800 ج')) + R('ليلى عمرو', '<span class="s-late" style="padding:2px 8px;border-radius:999px">لم يدفع</span>') + B('تسجيل دفعة');
+    else if (tab === 'student') body = G(C('الحضور', '15/16'), C('آخر كويز', '9/10'), C('الحصة الجاية', 'الأحد ٥ م')) + M('<b>رسالة من المستر</b><br>حلّوا الورقة دي قبل حصة الأحد.<br><span style="display:inline-block;margin-top:4px;font:11px var(--f-mono);background:#EEF2FF;border-radius:6px;padding:2px 6px;direction:ltr">worksheet-unit5.pdf</span>');
+    else body = G(C('حضور ابنك', '15/16'), C('متوسط الدرجات', '88%'), C('الاشتراك', 'مدفوع ✓')) + N('🔔 مالك حضر حصة النهارده وأخد 9/10 في الكويز.');
+    $('tch').innerHTML = '<div class="ua-bar"><b>نظام مدرس</b><small>English · إعدادي</small></div><div class="ua-body">' + body + '</div>';
+    $('tch').querySelectorAll('[data-a]').forEach(function(b){ b.addEventListener('click', function(){ att[b.dataset.a] = att[b.dataset.a] ? 0 : 1; draw(); }); });
+    $('tch').querySelectorAll('[data-q]').forEach(function(inp){ inp.addEventListener('input', function(){ quiz[inp.dataset.q] = inp.value.replace(/\D/g, '').slice(0, 2); }); });
+    var sv = $('tch').querySelector('.ua-btn');
+    if (sv) sv.addEventListener('click', function(){ sv.textContent = tab === 'teacher' ? 'اتحفظت ✓ واتبعت إشعار لأولياء الأمور' : 'اتسجّلت الدفعة ✓'; });
+  }
+  el.querySelectorAll('[data-s]').forEach(function(b){ b.addEventListener('click', function(){ size = b.dataset.s; draw(); }); });
+  el.querySelectorAll('[data-t]').forEach(function(b){ b.addEventListener('click', function(){ tab = b.dataset.t; draw(); }); });
+  draw();
+}
+function demoChat(el){
+  var QA = [['عندكم مقاس L من التيشيرت الأسود؟', 'أيوه، فيه <b>7 قطع</b> مقاس L. سعره <b>250 ج</b>، والتوصيل خلال يومين. أسجّلك طلب؟'],
+            ['أيوه سجّل الطلب', 'تم ✓ طلبك اتسجّل باسمك، وهيوصلك رسالة تأكيد على الواتساب.'],
+            ['مواعيدكم إيه؟', 'من <b>10 الصبح لـ 10 بالليل</b> كل يوم ما عدا الجمعة.'],
+            ['عايز أكلم حد من الفريق', 'تمام، حوّلتك لـ <b>أحمد</b> من المبيعات، وهيرد عليك خلال دقايق.']];
+  el.innerHTML = '<div class="tabs" role="group">' + QA.map(function(q, i){ return '<button type="button" data-q="' + i + '">' + q[0] + '</button>'; }).join('') + '</div><div class="dphone"><div class="screen" style="--app:#0891B2"><div class="ua"><div class="ua-bar"><b>HINDAWY Chat</b><small>متصل الآن</small></div><div class="ua-body" id="chatB" style="overflow:auto">' + M('أهلًا! أنا مساعد المحل. اسألني أي حاجة.') + '</div></div></div></div><p class="dnote">اضغط على أي سؤال فوق · tap a question</p>';
+  var timer, body = $('chatB');
+  el.querySelectorAll('[data-q]').forEach(function(b){ b.addEventListener('click', function(){
+    clearTimeout(timer); var qa = QA[b.dataset.q]; body.insertAdjacentHTML('beforeend', M(qa[0], true));
+    var bot = document.createElement('div'); bot.className = 'ua-msg'; bot.textContent = '…'; body.appendChild(bot); body.scrollTop = 1e6;
+    var txt = qa[1].replace(/<[^>]+>/g, ''), n = 0;
+    timer = setTimeout(function step(){ n += 2; bot.textContent = txt.slice(0, n); body.scrollTop = 1e6;
+      if (n < txt.length) timer = setTimeout(step, 18); else { bot.innerHTML = qa[1]; } }, 500);
+  }); });
+  return function(){ clearTimeout(timer); };
+}
+// the ERP demo: every role works on the same data, so what the warehouse, factory and sales do shows up for the owner straight away
+function demoErp(el){
+  var role = 'owner', st = { sheet: 18, made: 214, ready: 140, sales: 284500, cash: 1460000, due: 620000, invoiced: false,
+    log: [['10:20', 'أمر تشغيل #2241: اتعمل 214 من 350 دولاب'], ['09:58', 'الحضور: 46 من 48 موظف']] };
+  var money = function(n){ return n.toLocaleString('en') + ' ج'; };
+  el.innerHTML = '<div class="tabs" role="group">' + [['owner','صاحب الشركة'],['store','المخزن'],['factory','المصنع'],['sales','المبيعات'],['accounts','الحسابات']].map(function(t){ return '<button type="button" data-r="' + t[0] + '">' + t[1] + '</button>'; }).join('') +
+    '</div><div class="dweb"><div class="screen" id="erpS" style="--app:#2563EB"></div></div><p class="dnote">جرّب تعمل حاجة في المخزن أو المصنع أو المبيعات، وارجع لصاحب الشركة تلاقيها وصلت · sample data</p>';
+  function add(t){ st.log.unshift([timeNow(), t]); }
+  function draw(){
+    el.querySelectorAll('[data-r]').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.r === role); });
+    var body, btn = '';
+    if (role === 'owner') body = G(C('مبيعات النهارده', money(st.sales)), C('أمر #2241', st.made + ' / 350'), C('صاج في المخزن', st.sheet + ' طن'), C('الكاش في البنك', money(st.cash))) +
+      (st.sheet < 12 ? R('تنبيه: الصاج قرّب يخلص', 'اطلب من المورد', 'bad') : '') +
+      '<b style="font-size:12px">آخر حركة في الشركة</b>' + st.log.slice(0, 5).map(function(l){ return R(l[1], l[0]); }).join('');
+    else if (role === 'store') { body = '<b style="font-size:12px">أرصدة المخزن الرئيسي</b>' + TBL(['الصنف', 'الرصيد', 'الحد الأدنى'], [['صاج 1.5 مم', st.sheet + ' طن', '10 طن'], ['دهان إيبوكسي أسود', '400 لتر', '150 لتر'], ['مسامير وصواميل', '18 كرتونة', '10'], ['دولاب معدن جاهز', st.ready + ' قطعة', '50']]) + R('عربية مورد الحديد على الباب', '12 طن صاج'); btn = B('استلام 12 طن صاج'); }
+    else if (role === 'factory') { body = '<b style="font-size:12px">أمر تشغيل #2241 · دولاب معدن 4 ضلف</b>' + G(C('المطلوب', '350'), C('اتعمل', st.made), C('فاضل', 350 - st.made), C('الهالك', '1.8%')) + BARS([94, 81, 67, 88]) + R('خط 1 · قص وتشكيل', '94%', 'ok') + R('خط 2 · لحام', '81%') + R('خط 3 · دهان', '67%'); btn = st.made < 350 ? B('تسجيل إنتاج 50 دولاب') : T('الأمر خلص ✓ ودخل المخزن'); }
+    else if (role === 'sales') { body = '<b style="font-size:12px">فاتورة #8812</b>' + R('العميل', 'شركة النور للتوريدات') + R('120 دولاب × 1,233 ج', '148,000 ج') + R('الضريبة 14%', '20,720 ج') + R('المتاح في المخزن', st.ready + ' دولاب', st.ready < 120 ? 'bad' : 'ok'); btn = st.invoiced ? T('الفاتورة اتعتمدت ✓ واتخصمت من المخزن') : B('اعتماد الفاتورة'); }
+    else body = '<b style="font-size:12px">القيود اتعملت لوحدها من كل حركة</b>' + TBL(['الوقت', 'الحركة'], st.log.slice(0, 6).map(function(l){ return [l[0], l[1]]; })) + G(C('ليك عند العملاء', money(st.due)), C('الكاش في البنك', money(st.cash)));
+    $('erpS').innerHTML = A('HINDAWY ERP', body + btn, { owner: 'صاحب الشركة · من البيت', store: 'أمين المخزن', factory: 'مدير المصنع', sales: 'المبيعات', accounts: 'المحاسب' }[role]);
+    var b = $('erpS').querySelector('.ua-btn');
+    if (b) b.addEventListener('click', function(){
+      if (role === 'store') { st.sheet += 12; st.cash -= 212000; add('المخزن استلم 12 طن صاج من مورد الحديد · 212,000 ج'); }
+      if (role === 'factory') { var n = Math.min(50, 350 - st.made); st.made += n; st.ready += n; st.sheet = Math.max(0, +(st.sheet - 2.5).toFixed(1)); add('المصنع سلّم ' + n + ' دولاب للمخزن · أمر #2241'); }
+      if (role === 'sales' && st.ready >= 120) { st.ready -= 120; st.sales += 148000; st.due += 168720; st.invoiced = true; add('فاتورة #8812 لشركة النور · 148,000 ج'); }
+      else if (role === 'sales') { b.textContent = 'المخزن مفيهوش كفاية، روح المصنع سجّل إنتاج'; return; }
+      draw();
+    });
+  }
+  el.querySelectorAll('[data-r]').forEach(function(b){ b.addEventListener('click', function(){ role = b.dataset.r; draw(); }); });
+  draw();
+}
+
+/* ================= OUR PROJECTS (one full screen each) ================= */
+var PROJECTS = [
+  // the ERP section is written in the page itself (with its dashboard); here it only gets its story and demo
+  { id: 'erp', static: true, demo: demoErp,
+    jr: { user: 'PURCHASING → WAREHOUSE → FACTORY → SALES → ACCOUNTS → OWNER', device: 'web', color: '#2563EB', scenes: [
+      { en: 'Every team logs in to its own screen.', ar: 'كل قسم بيدخل على شاشته هو.', note: ['Here: the login page', 'صاحب الشركة، ومدير المصنع، وأمين المخزن، والمشتريات، والمبيعات، والمحاسب. كل واحد بيشوف شغله بس.'],
+        s: A('HINDAWY ERP · تسجيل الدخول', G(C('صاحب الشركة', '🔒'), C('مدير المصنع', '🔒'), C('أمين المخزن', '🔒'), C('المشتريات', '🔒'), C('المبيعات', '🔒'), C('المحاسب', '🔒')) + '<div class="ua-in"><input value="store.mahmoud" aria-label="اسم المستخدم" readonly><input value="••••••••" aria-label="كلمة السر" readonly></div>' + B('دخول', true), 'مصنع النور للأثاث المعدني') },
+      { en: 'Sheet metal is running low. Purchasing orders more.', ar: 'الصاج قرّب يخلص، والمشتريات بتطلب.', note: ['Here: the purchasing screen', 'السيستم نبّه لوحده إن الرصيد تحت الحد الأدنى، وبيقارن أسعار الموردين.'],
+        s: A('المشتريات · طلب شراء #512', R('صاج 1.5 مم', 'الرصيد 6 طن · الحد 10', 'bad') + TBL(['المورد', 'سعر الطن', 'التوصيل'], [['حديد المصريين', '17,650', 'بكرة'], ['الشرق للصلب', '18,100', '3 أيام'], ['النيل للمعادن', '17,900', 'يومين']]) + B('اعتماد الطلب من حديد المصريين', true)) },
+      { en: 'The warehouse receives it and the stock updates.', ar: 'المخزن بيستلم والرصيد بيتحدّث.', note: ['Here: the storekeeper’s screen', 'بيستلم البضاعة بالباركود، والرصيد والحسابات بيتحدّثوا في نفس اللحظة.'],
+        s: A('المخزن · استلام', R('صاج 1.5 مم', '+12 طن', 'ok') + R('دهان إيبوكسي أسود', '+400 لتر', 'ok') + R('مسامير وصواميل', '+18 كرتونة', 'ok') + G(C('صاج دلوقتي', '18 طن'), C('قيمة الاستلام', '212,000 ج')) + B('تأكيد الاستلام', true)) },
+      { en: 'The factory runs the production order.', ar: 'المصنع بيشغّل أمر الإنتاج.', note: ['Here: the factory manager’s screen', 'كل خط إنتاج ونسبته، والكمية اللي اتعملت، والهالك.'],
+        s: A('أمر تشغيل #2241 · دولاب معدن', G(C('المطلوب', '350'), C('اتعمل', '214'), C('الهالك', '1.8%'), C('التسليم', 'الخميس')) + R('خط 1 · قص وتشكيل', '94%', 'ok') + R('خط 2 · لحام', '81%') + R('خط 3 · دهان', '67%') + R('خط 4 · تغليف', '88%') + B('تسليم 50 دولاب للمخزن', true)) },
+      { en: 'Sales issues the invoice. Stock goes down by itself.', ar: 'المبيعات بتطلع الفاتورة، والمخزن بيتخصم لوحده.', note: ['Here: the sales screen', 'الفاتورة بتتأكد إن البضاعة موجودة، وبتنزل في الحسابات أوتوماتيك.'],
+        s: A('فاتورة #8812', R('العميل', 'شركة النور للتوريدات') + R('120 دولاب', '148,000 ج') + R('الضريبة 14%', '20,720 ج') + R('الإجمالي', '168,720 ج') + R('المخزن بعد الفاتورة', '20 دولاب') + B('اعتماد الفاتورة', true)) },
+      { en: 'The accountant finds every entry already made.', ar: 'والمحاسب بيلاقي كل القيود اتعملت لوحدها.', note: ['Here: the accountant’s screen', 'مفيش قيد بيتكتب بالإيد. كل حركة في أي قسم بتعمل قيدها.'],
+        s: A('الحسابات · النهارده', TBL(['الحركة', 'مدين', 'دائن'], [['فاتورة #8812', 'العملاء 168,720', 'المبيعات 148,000'], ['استلام صاج', 'المخزن 212,000', 'المورد 212,000'], ['إنتاج 50 دولاب', 'تام الصنع', 'تحت التشغيل'], ['مرتبات الأسبوع', 'الأجور 46,500', 'البنك 46,500']]) + G(C('ليك عند العملاء', '788,720 ج'), C('عليك للموردين', '412,000 ج'))) },
+      { en: 'And the owner sees it all, from home.', ar: 'وصاحب الشركة شايف كل ده وهو في البيت.', note: ['Here: the owner’s phone', 'الأرقام المهمة وكل تنبيه، من غير ما يروح المصنع ولا يتصل بحد.'],
+        s: A('صاحب الشركة · من البيت', G(C('مبيعات النهارده', '432,500 ج'), C('الإنتاج', '92%'), C('قيمة المخزون', '3.2 م ج'), C('صافي النهارده', '61,300 ج')) + BARS([38, 44, 41, 52, 58, 55, 63, 70, 66, 78, 86, 94]) + R('فاتورة #8812 اتعتمدت', '148,000 ج', 'ok') + R('خط 3 · دهان أبطأ من المعتاد', 'شوف', 'bad')) }] } },
+  { id: 'hader', num: 'PROJECT 01 · SCHOOLS', en: 'Hader', ar: 'حاضر', arT: 'حاضر · نظام الحضور والغياب للمدارس', demo: demoHader,
+    story: [['Before', 'Each class had a paper sheet that was walked to the office. Totals were added by hand at the end of the week, and parents heard about an absence days later.', 'كل فصل كان ليه كشف ورق بيتلف بيه على الإدارة، والإجماليات بتتحسب بالإيد آخر الأسبوع، وولي الأمر بيعرف إن ابنه غاب بعدها بأيام.', 'قبل'],
+            ['What we built', 'One system with six screens: teacher, class leader, student affairs, principal, student and parent. Everything happens on the phone. No paper moves anywhere.', 'سيستم واحد بست شاشات: المدرس، ورائد الفصل، وشؤون الطلاب، والمدير، والطالب، وولي الأمر. كل حاجة بتحصل من الموبايل، ومفيش ورقة بتتنقل.', 'اللي عملناه'],
+            ['After', 'A class is recorded in about 20 seconds, the office sees all 24 classes live, and the parent gets a message the same morning.', 'الفصل بيتسجّل في حوالي 20 ثانية، والإدارة بتشوف الـ 24 فصل لحظة بلحظة، وولي الأمر بيوصله رسالة في نفس الصبح.', 'بعد']],
+    roles: [['Teacher', 'المدرس', ['يفتح الحصة من موبايله ويضغط على الغايب بس', 'الكشف بيروح للرائد وشؤون الطلاب في نفس اللحظة', 'يشوف غياب الأسبوع لكل فصل بيدرّسه']],
+            ['Class leader', 'رائد الفصل', ['يتابع فصله حصة بحصة', 'يعرف مين اتأخر ومين مشي بدري', 'يأكّد كشف اليوم قبل ما يتقفل']],
+            ['Student affairs', 'شؤون الطلاب', ['قايمة جاهزة بالغياب المتكرر في المدرسة كلها', 'تنبيه لولي الأمر بضغطة واحدة', 'تقرير كامل لأي طالب وقت ما تحتاجه']],
+            ['Principal', 'المدير', ['نسبة الحضور لكل صف وكل فصل', 'يعرف مين من المدرسين لسه ما بعتش الكشف', 'تقارير يومية وأسبوعية وشهرية جاهزة']],
+            ['Student', 'الطالب', ['يشوف أيام حضوره وغيابه', 'يعرف لو قرّب من حد الإنذار', 'مايشوفش بيانات أي طالب تاني']],
+            ['Parent', 'ولي الأمر', ['رسالة في نفس اليوم لو ابنه غاب', 'سجل حضور ابنه طول الترم', 'يتواصل مع شؤون الطلاب من نفس الشاشة']]],
+    jr: { user: 'TEACHER → CLASS LEADER → STUDENT AFFAIRS → PARENT → STUDENT → PRINCIPAL', device: 'phone', color: '#0F766E', scenes: [
+      { en: 'Six roles. Each one logs in to their own screen.', ar: '6 أدوار، وكل واحد بيدخل على شاشته هو.', note: ['Here: the login page', 'كل دور ليه اسم مستخدم وكلمة سر، ومحدش بيقدر يفتح شاشة غيره.'],
+        s: A('حاضر · تسجيل الدخول', G(C('المدرس', '🔒'), C('رائد الفصل', '🔒'), C('شؤون الطلاب', '🔒'), C('المدير', '🔒'), C('الطالب', '🔒'), C('ولي الأمر', '🔒')) + '<div class="ua-in"><input value="t.ahmed.samir" aria-label="اسم المستخدم" readonly><input value="••••••" aria-label="كلمة السر" readonly></div>' + B('دخول', true), 'مدرسة النموذج الثانوية') },
+      { en: '8:02 AM. The teacher sees today’s classes.', ar: 'الساعة 8:02 الصبح، المدرس بيشوف حصص النهارده.', note: ['Here: the teacher’s screen', 'المدرس بيشوف الفصول اللي بيدرّسها النهارده بس، ومعاها عدد الطلبة واللي اتسجّل.'],
+        s: A('حاضر · أ. أحمد سمير', R('فصل 3/2 · الحصة 1', '32 طالب', '', true) + R('فصل 2/4 · الحصة 3', '30 طالب') + R('فصل 1/1 · الحصة 4', '34 طالب') + R('فصل 3/5 · الحصة 6', '31 طالب') + G(C('حصص النهارده', '4'), C('اتسجّل', '0 / 4'), C('غياب الأسبوع', '17'), C('أعلى فصل غياب', '2/4')), 'رياضيات · الأحد') },
+      { en: 'He taps only the absent students.', ar: 'بيضغط على الغايبين بس، والباقي بيتسجّل حاضر لوحده.', note: ['One tap per absent student', 'مش محتاج يندّه الأسماء واحد واحد. بيبص على الفصل ويضغط على اللي مش موجود.'],
+        s: A('فصل 3/2 · الحصة 1', NAMEGRID([4, 10], 8) + R('حاضر 29 من 32', 'غائب 3')) },
+      { en: 'One tap, and the class is recorded.', ar: 'ضغطة واحدة والكشف اتسجّل.', note: ['Sent in about 20 seconds', 'الكشف بيوصل للرائد وشؤون الطلاب والمدير في نفس اللحظة.'],
+        s: A('فصل 3/2 · الحصة 1', G(C('حاضر', '29'), C('غائب', '3'), C('متأخر', '1'), C('الوقت', '00:19')) + R('سارة محمود', 'غائب', 'bad') + R('زياد إبراهيم', 'غائب', 'bad') + R('كريم مصطفى', 'غائب', 'bad') + B('إرسال الغياب', true)) },
+      { en: 'The class leader follows his class all day.', ar: 'رائد الفصل بيتابع فصله طول اليوم.', note: ['Here: the class leader’s screen', 'فصله هو بس، حصة بحصة، ومين غاب في أنهي حصة.'],
+        s: A('حاضر · رائد فصل 3/2', TBL(['الحصة', 'المادة', 'غائب', 'الحالة'], [['1', 'رياضيات', '3', '✓'], ['2', 'عربي', '3', '✓'], ['3', 'فيزياء', '2', '✓'], ['4', 'إنجليزي', '2', '✓'], ['5', 'كيمياء', '—', 'لسه']]) + B('تأكيد كشف اليوم', true)) },
+      { en: 'Student affairs warns the parents.', ar: 'شؤون الطلاب بتبلّغ أولياء الأمور.', note: ['Here: the student affairs screen', 'قايمة بالغياب المتكرر في المدرسة كلها، والتنبيه بيتبعت بضغطة.'],
+        s: A('شؤون الطلاب · الأسبوع ده', TBL(['الطالب', 'الفصل', 'أيام', 'إنذار'], [['يوسف علي', '3/2', '4', 'أول'], ['زياد إبراهيم', '3/2', '3', '—'], ['جنى وليد', '2/1', '3', '—'], ['عمر خالد', '1/4', '5', 'تاني'], ['ملك عادل', '2/3', '3', '—']]) + B('تنبيه أولياء الأمور (5)', true)) },
+      { en: 'The parent knows the same morning.', ar: 'ولي الأمر بيعرف في نفس الصبح.', note: ['Here: the parent’s phone', 'بيوصله إشعار، ويقدر يفتح سجل ابنه هو بس.'],
+        s: A('حاضر · ولي الأمر', N('🔔 ابنك زياد إبراهيم غاب الحصة الأولى النهارده (الأحد 8:21 ص).') + G(C('حضور الترم', '61 / 64'), C('غياب', '3 أيام'), C('الحد', '15 يوم'), C('الإنذارات', 'لا يوجد')) + B('التواصل مع شؤون الطلاب', true)) },
+      { en: 'The student sees his own record.', ar: 'والطالب بيشوف سجله هو.', note: ['Here: the student’s screen', 'أيامه وغيابه والإنذارات، ومايشوفش أي حد تاني.'],
+        s: A('حاضر · الطالب', G(C('حضرت', '61 يوم'), C('غبت', '3 أيام'), C('متبقي للحد', '12 يوم'), C('ترتيب الحضور', '9 / 32')) + BARS([100, 95, 100, 90, 100, 100])) },
+      { en: 'The principal sees the whole school, live.', ar: 'والمدير بيشوف المدرسة كلها لحظة بلحظة.', note: ['Here: the principal’s screen', 'كل الصفوف والفصول، ومين لسه ما بعتش، من غير ما يلف على الفصول.'],
+        s: A('لوحة المدير', G(C('الحضور النهارده', '94.2%'), C('غياب', '38 طالب'), C('فصول بعتت', '23 / 24'), C('تنبيهات اتبعتت', '11')) + TBL(['الصف', 'الحضور', 'غياب'], [['أولى', '96%', '9'], ['تانية', '93%', '14'], ['تالتة', '92%', '15']]) + R('لسه ما بعتش', 'أ. منى · فصل 1/3', 'bad')) }] } },
+
+  { id: 'center', num: 'PROJECT 02 · EDUCATION CENTERS', en: 'Center System', ar: 'سيستم السنتر', arT: 'سيستم السنتر · إدارة السنتر كله من مكان واحد', demo: demoCenter,
+    story: [['Before', 'Attendance in one notebook, payments in another, grades on WhatsApp. The owner learned the month’s income only after counting cash at the end of the month.', 'الحضور في كشكول، والفلوس في كشكول تاني، والدرجات على الواتساب. وصاحب السنتر مش بيعرف دخل الشهر غير لما يعدّ الفلوس آخر الشهر.', 'قبل'],
+            ['What we built', 'The whole center in one system: groups and rooms, teachers and their shares, check-in by code, payments, grades and messages to parents. Five roles, each with its own screen.', 'السنتر كله في سيستم واحد: المجموعات والقاعات، والمدرسين ونسبهم، والحضور بالكود، والفلوس، والدرجات، والرسايل لأولياء الأمور. 5 أدوار، وكل دور ليه شاشته.', 'اللي عملناه'],
+            ['After', 'A student checks in within two seconds, unpaid fees show up on their own, and the owner sees every pound in and out the moment it happens.', 'الطالب بيسجّل في ثانيتين، واللي عليه فلوس بيظهر لوحده، وصاحب السنتر بيشوف كل جنيه داخل وخارج في نفس اللحظة.', 'بعد']],
+    roles: [['Center owner', 'صاحب السنتر', ['الدخل والمصاريف والصافي لحظة بلحظة', 'المجموعات والقاعات والمواعيد في جدول واحد', 'نسبة كل مدرس بتتحسب لوحدها']],
+            ['Assistant', 'الأسيستنت', ['يسجّل الحضور بكود الطالب في ثانيتين', 'يستلم الفلوس ويطبع الإيصال', 'مايشوفش الدرجات ولا أرباح السنتر']],
+            ['Teacher', 'المدرس', ['يشوف مجموعاته هو بس', 'يسجّل الدرجات والغياب', 'يبعت رسالة لمجموعة كاملة']],
+            ['Student', 'الطالب', ['مواعيده ودرجاته وترتيبه', 'الواجبات والملفات من المدرس', 'حسابه هو بس']],
+            ['Parent', 'ولي الأمر', ['حضور ابنه ودرجاته', 'الاشتراك مدفوع ولا لأ', 'رسايل المدرس']]],
+    jr: { user: 'OWNER → ASSISTANT → TEACHER → PARENT', device: 'web', color: '#1D4ED8', scenes: [
+      { en: 'Five roles. Five separate logins.', ar: '5 أدوار، وكل دور ليه دخول لوحده.', note: ['Here: the login page', 'كل واحد بيدخل بحسابه، ومحدش بيقدر يفتح شاشة غيره ولا يشوف بياناته.'],
+        s: A('سيستم السنتر · تسجيل الدخول', G(C('صاحب السنتر', '🔒'), C('الأسيستنت', '🔒'), C('المدرس', '🔒'), C('الطالب', '🔒')) + R('ولي الأمر', '🔒') + '<div class="ua-in"><input value="owner.center" aria-label="اسم المستخدم" readonly><input value="••••••••" aria-label="كلمة السر" readonly></div>' + B('دخول', true)) },
+      { en: 'The owner sees the whole center on one screen.', ar: 'صاحب السنتر بيشوف السنتر كله في شاشة واحدة.', note: ['Here: the owner’s dashboard', 'الطلاب والدخل والحضور والمتأخرين في الدفع، والرسم بيوضّح دخل كل شهر.'],
+        s: A('صاحب السنتر · أكتوبر', G(C('الطلاب', '248'), C('دخل الشهر', '71,200 ج'), C('الحضور', '92%'), C('متأخرين في الدفع', '14')) + BARS([48, 55, 61, 58, 70, 76, 82, 88, 94, 100]) + R('أعلى مجموعة دخل', 'فيزياء تالتة ث · 38%')) },
+      { en: 'Every group, room and teacher in one table.', ar: 'كل المجموعات والقاعات والمدرسين في جدول واحد.', note: ['Here: groups and rooms', 'مين بيدرّس إيه، في أنهي قاعة، وكام طالب، ونسبة الحضور.'],
+        s: A('المجموعات', TBL(['المجموعة', 'المدرس', 'القاعة', 'طلاب', 'حضور'], [['فيزياء 3ث · السبت 6م', 'أ. أحمد', 'A', '35', '94%'], ['كيمياء 2ث · الأحد 4م', 'أ. سامح', 'B', '28', '89%'], ['رياضيات 3ث · الإثنين 5م', 'أ. هبة', 'A', '41', '91%'], ['إنجليزي 1ث · الثلاثاء 7م', 'أ. منى', 'C', '33', '96%'], ['أحياء 3ث · الأربعاء 6م', 'أ. كريم', 'B', '30', '88%']])) },
+      { en: 'Teachers’ shares are calculated automatically.', ar: 'نسبة كل مدرس بتتحسب لوحدها.', note: ['Here: teacher payouts', 'كل مدرس ونسبته من دخل مجموعاته، من غير آلة حاسبة.'],
+        s: A('حسابات المدرسين · أكتوبر', TBL(['المدرس', 'الدخل', 'النسبة', 'المستحق'], [['أ. أحمد', '24,500', '60%', '14,700'], ['أ. سامح', '14,000', '55%', '7,700'], ['أ. هبة', '18,450', '60%', '11,070'], ['أ. منى', '9,900', '50%', '4,950']]) + B('اعتماد المرتبات', true)) },
+      { en: 'Unpaid fees show up by themselves.', ar: 'واللي عليه فلوس بيظهر لوحده.', note: ['Here: money', 'الدخل والمصاريف والصافي، وقايمة المتأخرين ورسالة تذكير بضغطة.'],
+        s: A('الحسابات', G(C('الدخل', '71,200 ج'), C('المصاريف', '9,400 ج'), C('مستحق للمدرسين', '38,420 ج'), C('الصافي', '23,380 ج')) + R('عمر خالد · كيمياء 2ث', '350 ج', 'bad') + R('آدم شريف · فيزياء 3ث', '400 ج', 'bad') + R('ملك عادل · أحياء 3ث', '300 ج', 'bad') + B('تذكير المتأخرين (14)', true)) },
+      { en: 'At the door, the assistant checks students in by code.', ar: 'على الباب، الأسيستنت بيسجّل الحضور بالكود.', note: ['Here: the assistant’s screen', 'بيسجّل الحضور ويستلم الفلوس بس. مايشوفش الدرجات ولا أرباح السنتر.'],
+        s: A('الأسيستنت · منى', '<div class="ua-in"><input value="1057" aria-label="كود" readonly><button type="button" class="ua-btn" data-tap>تسجيل</button></div>' + R('ياسين محمود · #1043', '٥:٥٨ م', 'ok') + R('سارة محمود · #1031', '٥:٥٧ م', 'ok') + R('عمر خالد · #0988', 'عليه 350 ج', 'bad') + G(C('حضروا', '31 / 35'), C('اتدفع النهارده', '2,450 ج'))) },
+      { en: 'The teacher saves grades for his group only.', ar: 'المدرس بيسجّل درجات مجموعته هو بس.', note: ['Here: the teacher’s screen', 'مجموعاته ودرجاتهم وغيابهم، والدرجات بتوصل لأولياء الأمور أوتوماتيك.'],
+        s: A('أ. أحمد · فيزياء 3ث', TBL(['الطالب', 'حضور', 'الامتحان'], [['يوسف علي', '✓', '18/20'], ['مريم حسن', '✓', '20/20'], ['جنى وليد', '✓', '17/20'], ['زياد إبراهيم', '✓', '18/20'], ['كريم مصطفى', '✗', '—'], ['ملك عادل', '✓', '19/20']]) + B('حفظ وإرسال لأولياء الأمور', true)) },
+      { en: 'The parent gets the result on the phone.', ar: 'وولي الأمر بيوصله النتيجة على موبايله.', note: ['Here: the parent’s screen', 'بيشوف ابنه هو بس: حضوره ودرجاته وفلوسه.'],
+        s: A('ولي الأمر', M('زياد أخد 18/20 في امتحان الفيزياء النهارده ✓ ترتيبه 7 من 35.') + G(C('الحضور', '11/12'), C('الاشتراك', 'مدفوع ✓'), C('متوسط الدرجات', '87%'), C('الحصة الجاية', 'السبت 6م'))) }] } },
+
+  { id: 'teacher', num: 'PROJECT 03 · PRIVATE TEACHERS', en: 'Teacher System', ar: 'نظام المدرس', arT: 'نظام المدرس · لمدرس الدروس الخصوصية', demo: demoTeacher,
+    story: [['Before', 'A teacher with five groups tracked attendance on paper, collected payments in cash with no record, and sent quiz results one WhatsApp message at a time.', 'مدرس عنده 5 مجموعات بيسجّل الحضور في ورق، وبيستلم الفلوس كاش من غير ما يعرف مين دفع ومين لأ، وبيبعت نتايج الكويز رسالة رسالة على الواتساب.', 'قبل'],
+            ['What we built', 'A system for one teacher and an assistant: groups, attendance with the quiz in the same screen, monthly or per-class payments, expenses and net, files and messages, and a portal for students and parents.', 'سيستم لمدرس وأسيستنت: المجموعات، والحضور مع الكويز في نفس الشاشة، والدفع شهري أو بالحصة، والمصاريف والصافي، والملفات والرسايل، وبوابة للطلاب وأولياء الأمور.', 'اللي عملناه'],
+            ['After', 'A class is saved in one tap, parents get the quiz grade the same hour, and the teacher knows his net income at any moment.', 'الحصة بتتحفظ بضغطة، وولي الأمر بيعرف درجة الكويز في نفس الساعة، والمدرس عارف صافي دخله في أي لحظة.', 'بعد']],
+    roles: [['Teacher', 'المدرس', ['كل مجموعاته وطلابه ومواعيده', 'الحضور والكويز في شاشة واحدة', 'الدخل والمصاريف والصافي']],
+            ['Assistant', 'الأسيستنت', ['يسجّل الدفع والحضور', 'باسورد خاص بيه من المدرس', 'مايشوفش الصافي']],
+            ['Student', 'الطالب', ['درجاته وترتيبه', 'الملفات والواجبات', 'مواعيد الحصص']],
+            ['Parent', 'ولي الأمر', ['إشعار بعد كل حصة', 'الاشتراك مدفوع ولا لأ', 'رسايل المدرس']]],
+    jr: { user: 'TEACHER → PARENT → STUDENT → ASSISTANT', device: 'phone', color: '#4338CA', scenes: [
+      { en: 'Each person has their own login.', ar: 'كل واحد ليه دخول خاص بيه.', note: ['Here: the login page', 'المدرس والأسيستنت بباسورد، والطالب وولي الأمر بكود ورقم سري خاص.'],
+        s: A('نظام المدرس', G(C('المدرس', '🔒'), C('الأسيستنت', '🔒'), C('الطالب', '🔒'), C('ولي الأمر', '🔒')) + '<div class="ua-in"><input value="كود الطالب: 2041" aria-label="الكود" readonly><input value="••••" aria-label="الرقم السري" readonly></div>' + B('دخول', true), 'English · إعدادي') },
+      { en: 'The teacher opens today’s classes.', ar: 'المدرس بيفتح حصص النهارده.', note: ['Here: the teacher’s screen', 'كل المجموعات والطلاب، ومين عليه فلوس.'],
+        s: A('نظام المدرس', R('تالتة إعدادي · ٥ م', '28 طالب', '', true) + R('تانية إعدادي · ٧ م', '24 طالب') + R('أولى إعدادي · بكرة ٤ م', '31 طالب') + G(C('طلاب', '83'), C('حصص الأسبوع', '9'), C('عليهم فلوس', '6'), C('متوسط الكويز', '8.1')), 'English · الأحد') },
+      { en: 'Attendance and the quiz, on one screen.', ar: 'الحضور والكويز في شاشة واحدة.', note: ['Saved in one tap', 'لكل طالب: حاضر ولا غايب، ودرجة الكويز، ودفع ولا لأ.'],
+        s: A('تالتة إعدادي · Quiz 6', TBL(['الطالب', 'حضور', 'كويز', 'دفع'], [['مالك سامح', '✓', '9', '✓'], ['ليلى عمرو', '✓', '8', '✗'], ['حمزة طارق', '✗', '—', '✓'], ['تاليا محمد', '✓', '10', '✓'], ['سليم وائل', '✓', '7', '✗'], ['جنى خالد', '✓', '9', '✓']]) + B('حفظ الحصة', true)) },
+      { en: 'Parents get a notification within the hour.', ar: 'ولي الأمر بيوصله إشعار في نفس الساعة.', note: ['Here: the parent’s screen', 'بيشوف ابنه هو بس.'],
+        s: A('ولي الأمر', N('🔔 مالك حضر حصة النهارده وأخد 9/10 في Quiz 6. ترتيبه 3 من 28.') + G(C('الحضور', '15/16'), C('المتوسط', '88%'), C('الاشتراك', 'مدفوع ✓'), C('الحصة الجاية', 'الأحد 5م'))) },
+      { en: 'Students get files and grades on any device.', ar: 'الطالب بيشوف ملفاته ودرجاته من أي جهاز.', note: ['Here: the student’s screen', 'درجاته وملفاته ورسايل المستر، على الموبايل أو اللابتوب.'],
+        s: A('الطالب · مالك', M('حلّوا الورقة دي قبل الأحد 📄 worksheet-unit5.pdf') + M('Quiz 6 results are out ✓') + TBL(['الكويز', 'الدرجة'], [['Quiz 4', '8/10'], ['Quiz 5', '9/10'], ['Quiz 6', '9/10']])) },
+      { en: 'Monthly or per class, expenses and net, all counted.', ar: 'شهري أو بالحصة، والمصاريف والصافي، كله متحسب.', note: ['Here: the accounts screen', 'الأسيستنت بيسجّل الدفع، والمدرس بس اللي بيشوف الصافي.'],
+        s: A('الحسابات · أكتوبر', G(C('الاشتراكات', '42/50'), C('بالحصة', '1,800 ج'), C('المصاريف', '1,200 ج'), C('الصافي', '9,800 ج')) + R('ليلى عمرو', 'لم يدفع', 'bad') + R('سليم وائل', 'لم يدفع', 'bad') + B('تذكير بالدفع (2)', true)) }] } },
+
+  { id: 'chat', num: 'PROJECT 04 · BUSINESSES', en: 'HINDAWY Chat', ar: 'شات هنداوي', arT: 'شات بوت · بيرد على عملاءك على كل المنصات', demo: demoChat,
+    story: [['Before', 'Messages came in on Instagram, WhatsApp and TikTok at all hours. Many were the same questions about price and size, and the ones sent at night waited until morning.', 'الرسايل بتيجي على إنستجرام وواتساب وتيك توك في كل وقت، وأغلبها نفس الأسئلة عن السعر والمقاس، واللي بيتبعت بالليل بيستنى للصبح.', 'قبل'],
+            ['What we built', 'One AI assistant connected to every channel. It answers from your real prices and stock, takes orders, and passes anything unusual to a person.', 'مساعد ذكي واحد متوصّل بكل القنوات. بيرد من أسعارك ومخزونك الحقيقي، وبياخد الطلبات، وأي حاجة غريبة بيحوّلها لحد من فريقك.', 'اللي عملناه'],
+            ['After', 'Every message gets an answer in seconds, day and night, and your team only handles what really needs them.', 'كل رسالة بيتردّ عليها في ثواني ليل ونهار، وفريقك بيتعامل بس مع اللي محتاجهم فعلًا.', 'بعد']],
+    roles: [['Customer', 'العميل', ['يسأل على أي منصة يحبها', 'رد في ثواني بالعامية', 'يطلب من غير ما يستنى']],
+            ['The bot', 'البوت', ['يرد من أسعارك ومخزونك', 'يسجّل الطلبات والمواعيد', 'يحوّل الحالات الصعبة لفريقك']],
+            ['Your team', 'فريقك', ['كل الرسايل في شاشة واحدة', 'يستلم بس الحالات المهمة', 'تقرير بأكتر الأسئلة تكرارًا']]],
+    on: ['web', 'whatsapp', 'instagram', 'tiktok', 'messenger', 'facebook', 'telegram'],
+    jr: { user: 'INSTAGRAM → WHATSAPP → TIKTOK → WEBSITE → YOUR TEAM', device: 'phone', color: '#0891B2', scenes: [
+      { en: 'On Instagram, a customer asks about a size.', ar: 'على إنستجرام، عميلة بتسأل على مقاس.', note: ['Instagram Direct', 'البوت بيرد في رسايل إنستجرام نفسها، باسم صفحتك.'],
+        s: AX('linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)', '📷 hindawy.store', M('عندكم الهودي الرمادي مقاس M؟', true) + M('أيوه، فيه 4 قطع مقاس M. سعره 450 ج. أبعتلك صورته؟') + M('أيوه لو سمحت', true) + B('ابعت الصورة', true), 'Instagram · Direct', '#fff') },
+      { en: 'On WhatsApp, it takes the whole order.', ar: 'على واتساب، بياخد الطلب كامل.', note: ['WhatsApp Business', 'بياخد الاسم والعنوان، ويأكد الطلب، ويبعت رقمه.'],
+        s: AX('#075E54', '💬 HINDAWY Store', M('عايز 2 تيشيرت أسود L', true) + M('تمام. الإجمالي 500 ج + توصيل 40 ج. ابعتلي العنوان.') + M('المعادي، شارع 9', true) + T('طلب #2041 اتسجّل ✓') + B('تأكيد الطلب', true), 'online', '#ECE5DD') },
+      { en: 'On TikTok, it replies to comments.', ar: 'على تيك توك، بيرد على الكومنتات.', note: ['TikTok comments', 'بيرد على "بكام؟" تحت الفيديو، ويكمّل مع العميل في الرسايل.'],
+        s: AX('#000000', '🎵 @hindawy.store', R('سارة: بكام الكاب ده؟', '') + R('↳ hindawy.store: بـ 120 ج، ابعتلنا رسالة نحجزهولك 🤍', '', 'ok') + R('عمر: فيه توصيل للإسكندرية؟', '') + R('↳ hindawy.store: أيوه خلال 3 أيام 🚚', '', 'ok') + B('رد على الكل', true), 'تعليقات الفيديو', '#111') },
+      { en: 'On your website, it books appointments.', ar: 'على موقعك، بيحجز المواعيد.', note: ['Website chat', 'نفس البوت جوه موقعك، بيحجز ويرد على الأسئلة.'],
+        s: AX('#0891B2', '🌐 hindawy.store', M('مواعيدكم إيه؟ ينفع أجي أقيس بكرة؟', true) + M('بنفتح من 10 ص لـ 10 م. فيه مواعيد بكرة: 1 م، 4 م، 7 م.') + '<div class="ua-slots"><span>1:00</span><span data-tap>4:00</span><span>7:00</span></div>', 'Chat') },
+      { en: 'Your team sees every channel in one inbox.', ar: 'وفريقك بيشوف كل القنوات في مكان واحد.', note: ['Here: your team’s screen', 'كل الرسايل من كل المنصات، والبوت بيحوّل بس اللي محتاج إنسان.'],
+        s: A('صندوق الرسايل · النهارده', G(C('رسايل', '186'), C('ردّ البوت', '171'), C('اتحوّلت لفريقك', '15'), C('متوسط الرد', '3 ث')) + R('📷 Instagram', '74') + R('💬 WhatsApp', '63') + R('🎵 TikTok', '31') + R('🌐 الموقع', '18') + R('أحمد: طلب استرجاع', 'محتاج رد', 'bad')) }] } }
+];
+// how each project keeps its users' data safe (shown with the project, not with the tools)
+var SAFE_NOTE = {
+  hader: ['Every role has its own login, and a teacher sees only his own classes. The data stays in the school’s own account.', 'كل دور ليه دخول خاص بيه، والمدرس بيشوف فصوله بس. والبيانات في حساب المدرسة نفسها.'],
+  center: ['Five roles, five logins. Each person sees only their own data, and passwords are stored encrypted.', '5 أدوار و5 أنواع دخول. كل واحد بيشوف بياناته هو بس، والباسوردات متشفّرة.'],
+  teacher: ['Students and parents sign in with a code and a private PIN, and each one sees only their own child.', 'الطالب وولي الأمر بيدخلوا بكود ورقم سري خاص، وكل واحد بيشوف ابنه هو بس.'],
+  chat: ['The bot answers only from the information you approve, and never shares one customer’s details with another.', 'البوت بيرد من المعلومات اللي انت موافق عليها بس، وعمره ما يشارك بيانات عميل مع عميل تاني.']
+};
+var LOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>';
+$('projList').outerHTML = PROJECTS.map(function(p, i){
+  if (p.static) return '';
+  var safe = SAFE_NOTE[p.id];
+  return '<section class="proj" id="p-' + p.id + '"><div class="wrap p-in">' +
+    '<div class="p-head"><div><span class="num">' + p.num + '</span><h2 data-ar="' + p.ar + '">' + p.en + '</h2><span class="ar-t">' + p.arT + '</span></div>' +
+    '<div class="modes" role="group" aria-label="View" data-p="' + i + '"><button type="button" data-m="how" aria-pressed="true" data-ar="شوف بيتستخدم إزاي<small>See how it’s used</small>">See how it’s used<small>شوف بيتستخدم إزاي</small></button><button type="button" data-m="demo" aria-pressed="false" data-ar="جرّب بنفسك<small>Try the demo</small>">Try the demo<small>جرّب بنفسك</small></button></div></div>' +
+    '<div class="stage glass" id="stage-' + i + '"></div>' +
+    '<div class="roles-grid">' + p.roles.map(function(r){ return '<div class="role glass"><b data-ar="' + r[1] + '<small>' + r[0] + '</small>">' + r[0] + '<small>' + r[1] + '</small></b><ul class="ar">' + r[2].map(function(x){ return '<li>' + x + '</li>'; }).join('') + '</ul></div>'; }).join('') + '</div>' +
+    '<div class="p-story">' + p.story.map(function(s){ return '<div><b data-ar="' + s[3] + '">' + s[0] + '</b><p>' + s[1] + '</p><p class="ar">' + s[2] + '</p></div>'; }).join('') +
+      '<div class="safe-box"><b><i>' + LOCK + '</i><span data-ar="الأمان">Security</span></b><p>' + safe[0] + '</p><p class="ar">' + safe[1] + '</p></div></div>' +
+    (p.on ? '<div class="works glass"><b>Works on</b>' + brands(p.on) + '<p class="ar">بنركّب نفس البوت على موقعك، أو واتساب، أو إنستجرام، أو تيك توك، أو ماسنجر، أو تليجرام، وكله بيرد من نفس البيانات.</p></div>' : '') +
+    '<div class="p-cta glass"><div><b data-ar="عايز حاجة زي دي؟">Want something like this?</b><p class="ar">كلّمنا ونبدأ مشروعك.</p></div><div class="cta"><a class="btn" href="#contact" data-ar="ابدأ مشروعك">Start a project</a><a class="btn solid" href="#contact" data-ar="كلّمنا">Talk to us</a></div></div>' +
+    '</div></section>';
+}).join('');
+
+var pClean = {};
+function openProject(i, mode){
+  var p = PROJECTS[i], st = $('stage-' + i);
+  if (pClean[i]) pClean[i]();
+  document.querySelectorAll('.modes[data-p="' + i + '"] button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.m === mode); });
+  st.innerHTML = '<div></div>';
+  pClean[i] = mode === 'how' ? journey(st.firstChild, p.jr, false) : (st.firstChild.className = 'demo', p.demo(st.firstChild) || null);
+  if (!reduce) gsap.from(st.firstChild, { y: 20, opacity: 0, filter: 'blur(8px)', duration: .5 });
+}
+PROJECTS.forEach(function(p, i){
+  document.querySelectorAll('.modes[data-p="' + i + '"] button').forEach(function(b){ b.addEventListener('click', function(){ openProject(i, b.dataset.m); }); });
+  // start each project's story when it scrolls in, and pause it when it leaves
+  ScrollTrigger.create({ trigger: $('stage-' + i), start: 'top 85%', end: 'bottom 10%',
+    onEnter: function(){ if (!pClean[i]) openProject(i, 'how'); }, onEnterBack: function(){ if (!pClean[i]) openProject(i, 'how'); },
+    onLeave: function(){ if (pClean[i]) { pClean[i](); pClean[i] = null; } }, onLeaveBack: function(){ if (pClean[i]) { pClean[i](); pClean[i] = null; } } });
+  if (!reduce && !p.static) {
+    var sec = $('stage-' + i).closest('.proj');
+    gsap.from(sec.querySelectorAll('.p-head > *, .p-story > div'), { y: 50, opacity: 0, filter: 'blur(10px)', duration: .9, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: sec, start: 'top 70%' } });
+  }
+});
+
+// the ERP section is written in the page, so it gets its own entrance
+if (!reduce) gsap.from('.erp .p-head > *, .erp-lead, .erp-view, .erp-flow > *', { y: 40, opacity: 0, filter: 'blur(8px)', duration: .8, stagger: .05, ease: 'expo.out', scrollTrigger: { trigger: '.erp', start: 'top 70%' } });
+
+/* ================= WHAT WE BUILD: the ideas spiralling around the engine ================= */
+var IDEAS = [
+  { en: 'ERP: Your Whole Business', ar: 'ERP يدير شركتك كلها', who: 'Owner & every team', color: '#2563EB', device: 'web', scenes: [
+    { en: 'Raw material arrives at the warehouse.', ar: 'الخامة بتوصل المخزن وبتتسجّل.', s: A('المخزن · استلام بضاعة', R('صاج 1.5 مم', '12 طن', 'ok') + R('دهان إيبوكسي أسود', '400 لتر', 'ok') + R('مسامير وصواميل', '18 كرتونة', 'ok') + B('تأكيد الاستلام', true)) },
+    { en: 'The factory runs the production order.', ar: 'المصنع بيشغّل أمر الإنتاج.', s: A('أمر تشغيل #2241', R('المنتج', 'دولاب معدن 4 ضلف') + R('الكمية', '350 قطعة') + R('اتعمل لحد دلوقتي', '214 قطعة') + BARS([20, 38, 51, 61, 72]) + B('تحويل للمخزن', true)) },
+    { en: 'A sale updates the stock and the books.', ar: 'البيعة بتخصم من المخزن وبتنزل في الحسابات لوحدها.', s: A('فاتورة #8812', R('العميل', 'شركة النور للتوريدات') + R('120 دولاب', '148,000 ج') + R('الضريبة', '20,720 ج') + B('اعتماد الفاتورة', true)) },
+    { en: 'And the owner sees it all from home.', ar: 'وصاحب الشركة شايف كل ده وهو في البيت.', s: A('لوحة صاحب الشركة', G(C('مبيعات النهارده', '284,500 ج'), C('الإنتاج', '92%'), C('قيمة المخزون', '3.2 م ج'), C('الكاش', '1.46 م ج')) + R('تنبيه: الصاج قرّب يخلص', 'اطلب', 'bad')) }] },
+  { en: 'Clinic Booking', ar: 'حجز عيادات وتذكير المرضى', who: 'Receptionist & patient', color: '#0D9488', device: 'phone', scenes: [
+    { en: 'The patient picks a time.', ar: 'المريض بيختار المعاد اللي يناسبه.', s: A('عيادة د. سارة', '<div class="ua-slots"><span>4:00</span><span class="off">4:30</span><span data-tap>5:00</span><span>5:30</span><span class="off">6:00</span><span>6:30</span></div>' + N('كشف عام · 300 ج'), 'الثلاثاء') },
+    { en: 'A reminder goes out the day before.', ar: 'وقبلها بيوم بيوصله تذكير على الواتساب.', s: A('WhatsApp', M('تذكير: معادك بكرة الساعة 5:00 مع د. سارة. للتأكيد اضغط 1') + M('1', true)) },
+    { en: 'The receptionist sees today’s list.', ar: 'والسكرتيرة بتشوف كشف النهارده.', s: A('العيادة · النهارده', R('أحمد سمير', '4:00 · وصل', 'ok') + R('منى علي', '5:00 · مأكد') + B('وصل المريض', true)) },
+    { en: 'Fewer no-shows, a calmer clinic.', ar: 'غياب أقل وعيادة أهدى.', s: A('التقرير', G(C('المواعيد', '32'), C('الغياب', '−60%')) + BARS([40, 55, 70, 65, 80])) }] },
+  { en: 'Restaurant QR Orders', ar: 'منيو QR وطلبات للمطبخ', who: 'Customer & kitchen', color: '#EA580C', device: 'phone', scenes: [
+    { en: 'The customer scans and orders.', ar: 'الزبون بيعمل سكان ويطلب من الترابيزة.', s: A('منيو · ترابيزة 7', R('برجر كلاسيك', '120 ج') + R('بطاطس', '40 ج', '', true) + R('عصير مانجا', '35 ج')) },
+    { en: 'The order lands in the kitchen.', ar: 'الطلب بيوصل المطبخ فورًا.', s: A('المطبخ', R('ترابيزة 7', 'برجر + بطاطس + عصير') + B('جاهز', true)) },
+    { en: 'The table knows it’s on the way.', ar: 'والزبون بيعرف إن طلبه جاي.', s: A('ترابيزة 7', T('طلبك جاهز وجاي ✓') + G(C('الحساب', '195 ج'), C('الوقت', '12 د'))) }] },
+  { en: 'Gym Memberships', ar: 'اشتراكات الجيم ودخول بالـ QR', who: 'Member & gym owner', color: '#7C3AED', device: 'phone', scenes: [
+    { en: 'The member checks in with a QR.', ar: 'المشترك بيدخل بالـ QR.', s: A('My Gym', '<div class="ua-card" style="text-align:center;padding:20px"><b style="font-size:40px">▦</b><small>QR الدخول</small></div>' + B('دخول', true)) },
+    { en: 'The owner sees who’s expiring.', ar: 'وصاحب الجيم بيشوف الاشتراكات اللي قرّبت تخلص.', s: A('لوحة الجيم', R('كريم مصطفى', 'بيخلص بعد 3 أيام', 'bad') + R('سارة محمود', 'بيخلص بكرة', 'bad') + B('ابعت تذكير', true)) },
+    { en: 'Renewals come back on their own.', ar: 'والتجديدات بترجع لوحدها.', s: A('التقرير', G(C('تجديدات الشهر', '64'), C('نسبة التجديد', '82%'))) }] },
+  { en: 'Online Store + WhatsApp', ar: 'متجر أونلاين وطلبات على الواتساب', who: 'Shop owner', color: '#16A34A', device: 'phone', scenes: [
+    { en: 'A new order arrives.', ar: 'طلب جديد بيوصل.', s: A('الطلبات', R('منى · 2 تيشيرت', '500 ج', '', true) + R('عمر · كاب', '120 ج', 'ok')) },
+    { en: 'One tap confirms it.', ar: 'ضغطة واحدة وتأكّده.', s: A('طلب منى', R('2 تيشيرت أسود', '500 ج') + R('العنوان', 'المعادي') + B('تأكيد الطلب', true)) },
+    { en: 'The customer gets a WhatsApp.', ar: 'والعميل بيوصله واتساب.', s: A('WhatsApp', M('أهلًا منى، طلبك اتأكد وهيوصلك خلال يومين ✓')) }] },
+  { en: 'Factory Monitor', ar: 'مراقبة الماكينات وتوقّع الأعطال', who: 'Shift engineer', color: '#DC2626', device: 'web', scenes: [
+    { en: 'Every machine, one screen.', ar: 'كل الماكينات في شاشة واحدة.', s: A('خط الإنتاج 2', R('ماكينة 1', 'طبيعي', 'ok') + R('ماكينة 2', 'اهتزاز عالي', 'bad', true) + R('ماكينة 3', 'طبيعي', 'ok')) },
+    { en: 'AI warns days before a failure.', ar: 'الذكاء الاصطناعي بينبّه قبل العطل بأيام.', s: A('ماكينة 2', N('الرولمان غالبًا بيتآكل. العطل متوقع خلال 3 أيام.') + BARS([30, 35, 40, 60, 85, 95]) + B('جدولة صيانة', true)) },
+    { en: 'Fixed before it stops.', ar: 'واتصلّحت قبل ما تقف.', s: A('الصيانة', T('اتجدولت بكرة 8 ص ✓') + G(C('وقت التوقف', '0 س'), C('توفير', '45,000 ج'))) }] },
+  { en: 'Real-Estate CRM', ar: 'متابعة عملاء العقارات', who: 'Sales agent', color: '#0369A1', device: 'phone', scenes: [
+    { en: 'A new lead comes in.', ar: 'عميل جديد مهتم بشقة.', s: A('العملاء', R('محمد · شقة 3 أوض', 'جديد', '', true) + R('نهى · فيلا', 'متابعة')) },
+    { en: 'The agent calls and logs it.', ar: 'المندوب بيكلّمه ويسجّل المكالمة.', s: A('محمد', R('الميزانية', '2 مليون') + R('المنطقة', 'التجمع') + B('حدّد معاد معاينة', true)) },
+    { en: 'No follow-up is forgotten.', ar: 'ومفيش متابعة بتتنسي.', s: A('المتابعات', R('معاينة مع محمد', 'الخميس 4 م', 'ok') + G(C('صفقات الشهر', '6'), C('العمولة', '120,000 ج'))) }] },
+  { en: 'Pharmacy Stock', ar: 'مخزون الصيدلية والصلاحية', who: 'Pharmacist', color: '#059669', device: 'phone', scenes: [
+    { en: 'Every sale updates the stock.', ar: 'كل بيعة بتحدّث المخزون.', s: A('الصيدلية', R('بنادول 500', 'متبقي 4', 'bad', true) + R('فيتامين سي', 'متبقي 40', 'ok')) },
+    { en: 'Low stock? Order in one tap.', ar: 'المخزون قلّ؟ اطلب في ضغطة.', s: A('بنادول 500', N('المخزون هيخلص خلال يومين.') + B('اطلب من المورد', true)) },
+    { en: 'Expiry dates are watched for you.', ar: 'وتواريخ الصلاحية متراقبة.', s: A('الصلاحية', R('شراب كحة', 'ينتهي بعد 20 يوم', 'bad') + T('اتبعت الطلب للمورد ✓')) }] },
+  { en: 'Delivery Tracking', ar: 'تتبّع التوصيل', who: 'Driver & customer', color: '#CA8A04', device: 'phone', scenes: [
+    { en: 'The driver sees today’s route.', ar: 'المندوب بيشوف طلبات النهارده بالترتيب.', s: A('المندوب', R('1 · مدينة نصر', 'جاري', '', true) + R('2 · المعادي', 'بعده') + R('3 · الزمالك', 'بعده')) },
+    { en: 'Delivered, with one tap.', ar: 'اتسلّم بضغطة.', s: A('طلب مدينة نصر', R('العميل', 'منى') + R('المبلغ', '250 ج') + B('تم التوصيل', true)) },
+    { en: 'The customer is told right away.', ar: 'والعميل بيوصله تأكيد فورًا.', s: A('WhatsApp', M('طلبك اتسلّم ✓ شكرًا لثقتك!')) }] },
+  { en: 'HR & Payroll', ar: 'الحضور والمرتبات', who: 'Employee & HR', color: '#9333EA', device: 'phone', scenes: [
+    { en: 'The employee checks in.', ar: 'الموظف بيسجّل حضوره.', s: A('حضوري', '<div class="ua-card" style="text-align:center"><b style="font-size:26px">8:57</b><small>في الموعد</small></div>' + B('تسجيل حضور', true)) },
+    { en: 'HR sees the whole team.', ar: 'وشؤون الموظفين بتشوف الفريق كله.', s: A('الموظفين', R('أحمد', 'حاضر 8:57', 'ok') + R('منى', 'إجازة') + R('كريم', 'متأخر 9:20', 'bad')) },
+    { en: 'Payroll calculates itself.', ar: 'والمرتبات بتتحسب لوحدها.', s: A('مرتبات الشهر', G(C('الإجمالي', '184,000 ج'), C('الخصومات', '2,300 ج')) + B('اعتماد المرتبات', true)) }] },
+  { en: 'Car Service Center', ar: 'مركز صيانة سيارات', who: 'Mechanic & car owner', color: '#475569', device: 'phone', scenes: [
+    { en: 'Every car has a live status.', ar: 'كل عربية ليها حالة لحظة بلحظة.', s: A('الورشة', R('تويوتا كورولا', 'تغيير زيت', '', true) + R('هيونداي', 'فحص فرامل')) },
+    { en: 'The mechanic marks it ready.', ar: 'الميكانيكي بيعلّمها جاهزة.', s: A('تويوتا كورولا', R('الشغل', 'زيت + فلتر') + R('الفاتورة', '850 ج') + B('العربية جاهزة', true)) },
+    { en: 'The owner gets the invoice.', ar: 'وصاحب العربية بيوصله الفاتورة.', s: A('WhatsApp', M('عربيتك جاهزة ✓ الفاتورة 850 ج. تقدر تستلمها لحد 9 م.')) }] }
+];
+// one line per idea: what it does (EN, AR) and where it can live
+var IDEA_INFO = [
+  ['One system for the whole company, from manufacturing to the money, and you watch it from anywhere.', 'سيستم واحد للشركة كلها، من التصنيع لحد الفلوس، وانت متابعه من أي مكان.', ['web', 'whatsapp', 'sheets']],
+  ['Patients book online and get reminders, so fewer appointments are missed.', 'المريض يحجز أونلاين ويوصله تذكير، فالمواعيد الضايعة بتقل.', ['web', 'whatsapp', 'maps']],
+  ['Guests order from the table; the kitchen gets it in a second.', 'الزبون يطلب من الترابيزة، والمطبخ يستلم في ثانية.', ['web', 'instagram', 'whatsapp']],
+  ['Members check in with a QR; renewals remind themselves.', 'المشترك يدخل بالـ QR، والتجديد بيفكّر نفسه.', ['web', 'whatsapp', 'instagram']],
+  ['Orders from the site and social media land in one list.', 'طلبات الموقع والسوشيال بتنزل في قايمة واحدة.', ['web', 'instagram', 'tiktok', 'whatsapp', 'facebook']],
+  ['AI watches every machine and warns days before a failure.', 'الذكاء الاصطناعي بيراقب الماكينات وبينبّه قبل العطل بأيام.', ['web', 'whatsapp', 'telegram']],
+  ['Every lead, call and visit in one place, with follow-ups.', 'كل عميل ومكالمة ومعاينة في مكان واحد، مع المتابعة.', ['web', 'whatsapp', 'facebook', 'instagram']],
+  ['Stock and expiry dates watched for you, with one-tap reorders.', 'المخزون والصلاحية متراقبين، والطلب من المورد بضغطة.', ['web', 'whatsapp', 'sheets']],
+  ['Drivers follow a route; customers get live updates.', 'المندوب ماشي بخط سير، والعميل بيتابع لحظة بلحظة.', ['web', 'whatsapp', 'maps']],
+  ['Check-ins, leaves and payroll that calculates itself.', 'حضور وإجازات ومرتبات بتتحسب لوحدها.', ['web', 'whatsapp', 'sheets']],
+  ['Every car has a live status; owners get the invoice by message.', 'كل عربية ليها حالة لايف، وصاحبها يوصله الفاتورة برسالة.', ['web', 'whatsapp', 'maps']]
+];
+(function(){
+  /* the cards climb a spiral around the engine as you scroll (the engine itself is the 3D scene at the end of the page) */
+  var helix = $('helix');
+  var cards = IDEAS.map(function(d, i){
+    var info = IDEA_INFO[i]; d.d = info[0]; d.da = info[1]; d.on = info[2];
+    var c = document.createElement('button'); c.type = 'button'; c.className = 'icard';
+    c.addEventListener('click', function(){ openIdea(d, i); }); helix.appendChild(c); return c;
+  });
+  function fill(){
+    cards.forEach(function(c, i){
+      var d = IDEAS[i], ar = prefs.lang === 'ar';
+      c.innerHTML = '<span class="n">IDEA ' + String(i + 1).padStart(2, '0') + ' / ' + cards.length + '</span>' +
+        (ar ? '<b class="is-ar">' + d.ar + '</b><span>' + d.en + '</span><p class="ar">' + d.da + '</p>'
+            : '<b>' + d.en + '</b><span class="ar">' + d.ar + '</span><p>' + d.d + '</p>') +
+        '<div class="row"><span class="who">' + d.who + '</span>' + brands(d.on) + '</div>';
+    });
+  }
+  fill(); onLang.push(fill);
+  ScrollTrigger.create({ trigger: '#build', start: 'top top', end: 'bottom bottom', onUpdate: function(st){ HB.p = st.progress; } });
+  // the ideas wind up around the gears like tape on a reel, and never run out: each one comes back in at the bottom.
+  // Left alone, the reel turns one card, stops for a moment so it can be read, then turns to the next.
+  // Scrolling spins it freely, and when the scroll stops it settles on the nearest card. Idea 01 starts in front.
+  var n = cards.length, half = n / 2, flow = 0, target = 0, lastT = 0, lastP = 0, lastScroll = -1e9, nextStep = 2600;
+  (function loop(t){
+    var small = innerWidth < 700, dt = lastT ? Math.min(64, t - lastT) : 16; lastT = t;
+    var dp = HB.p - lastP; lastP = HB.p;
+    if (dp) { target += dp * 8; lastScroll = t; }
+    else if (t - lastScroll > 600 && target !== Math.round(target)) { target = Math.round(target); nextStep = t + 2400; }
+    else if (!reduce && t > nextStep) { target += 1; nextStep = t + 3000; }
+    flow += (target - flow) * Math.min(1, dt / 240);
+    // on phones the spiral is narrower and fewer cards show at once, so nothing spills off the screen
+    var R = small ? Math.min(48, innerWidth * .13) : Math.min(440, innerWidth * .3), step = small ? 150 : 125, reach = small ? 2 : 2.6;
+    cards.forEach(function(c, i){
+      var u = ((flow - i + half) % n + n) % n - half;       // where this card is on the spiral: 0 is the front, positive is higher up
+      var a = u * 1.25;
+      var x = Math.sin(a) * R, z = Math.cos(a) * R, y = -u * step;
+      var topRoom = Math.min(1, Math.max(0, (y + innerHeight * .57 - (small ? 230 : 250)) / 120)); // fade before the heading
+      var vis = Math.max(0, 1 - Math.pow(Math.abs(u) / reach, 4)) * topRoom, front = (z / R + 1) / 2;
+      c.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0) scale(' + (.7 + .32 * front) + ')';
+      c.style.opacity = vis * (.35 + .65 * front);
+      c.style.zIndex = z > 0 ? 10 + Math.round(z) : Math.max(1, Math.round(4 + z / R * 3));   // the gears sit at 5: near side in front, far side behind
+      c.style.pointerEvents = vis > .45 && z > -R * .2 ? 'auto' : 'none';
+    });
+    requestAnimationFrame(loop);
+  })(0);
+})();
+var modal = $('modal'), mClean = null;
+function openIdea(d, i){
+  modal.hidden = false; document.body.style.overflow = 'hidden';
+  var st = $('mstage');
+  st.innerHTML = '<div class="m-head"><div><span class="label">IDEA ' + String(i + 1).padStart(2, '0') + ' · ' + d.who + '</span><h3>' + d.en + '</h3><p class="ar">' + d.ar + '</p>' +
+    '<p style="margin:8px 0 0;max-width:60ch">' + d.d + '</p><p class="ar">' + d.da + '</p><div class="works" style="padding:10px 0 0"><b>Works on</b>' + brands(d.on) + '</div>' +
+    '<div class="cta" style="margin-top:12px"><a class="btn" href="#contact" data-close>Build this with us</a><a class="btn ghost" href="#contact" data-close>Talk to us</a></div></div>' +
+    '<div style="display:flex;gap:8px;align-items:center"><div class="modes" role="group"><button type="button" data-m="how" aria-pressed="true">See how it’s used<small>شوف بيتستخدم إزاي</small></button><button type="button" data-m="try" aria-pressed="false">Try the demo<small>جرّب بنفسك</small></button></div><button class="xb" type="button" aria-label="Close">✕</button></div></div><div id="mbody"></div>';
+  var cfg = { user: d.who.toUpperCase(), device: d.device, color: d.color, scenes: d.scenes };
+  function run(mode){
+    if (mClean) mClean();
+    st.querySelectorAll('.modes button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.m === mode); });
+    mClean = journey($('mbody'), cfg, mode === 'try');
+  }
+  st.querySelectorAll('.modes button').forEach(function(b){ b.addEventListener('click', function(){ run(b.dataset.m); }); });
+  st.querySelector('.xb').addEventListener('click', closeIdea);
+  st.querySelectorAll('[data-close]').forEach(function(a){ a.addEventListener('click', closeIdea); });
+  run('how');
+  if (!reduce) gsap.from(st, { y: 40, scale: .96, opacity: 0, duration: .5, ease: 'expo.out' });
+  st.querySelector('.xb').focus();
+}
+function closeIdea(){ modal.hidden = true; document.body.style.overflow = ''; if (mClean) mClean(); mClean = null; }
+modal.addEventListener('click', function(e){ if (e.target === modal) closeIdea(); });
+addEventListener('keydown', function(e){ if (e.key === 'Escape' && !modal.hidden) closeIdea(); });
+
+/* ================= WHAT WE USE + SECURITY ================= */
+// [icon svg, name, what for (EN, AR), its security (EN, AR), brand colour]
+var TOOLS = [
+  ['<svg viewBox="0 0 128 128"><path fill="#007ACC" fill-rule="evenodd" d="M90.767 127.126a7.968 7.968 0 0 0 6.35-.244l26.353-12.681a8 8 0 0 0 4.53-7.209V21.009a8 8 0 0 0-4.53-7.21L97.117 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026L15.6 32.013a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.335 5.335 0 0 0-.006 7.888L20.796 64 1.74 81.387a5.336 5.336 0 0 0 .006 7.887l7.048 6.411a5.327 5.327 0 0 0 6.807.303l21.974-16.68 50.45 46.025a7.96 7.96 0 0 0 2.743 1.793Zm5.252-92.183L57.74 64l38.28 29.058V34.943Z"/></svg>',
+    'Visual Studio Code', 'Where we write and test every line.', 'هنا بنكتب ونجرّب كل سطر كود.', 'Trusted extensions only. No passwords saved in project files.', 'إضافات موثوقة بس، ومفيش باسوردات بتتحفظ في ملفات المشروع.', '#007ACC'],
+  ['<svg viewBox="0 0 24 24"><path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>',
+    'Claude', 'Our AI partner for building, reviewing and explaining.', 'شريكنا في الذكاء الاصطناعي: بيساعدنا نبني ونراجع ونشرح.', 'Never given passwords or customer data. We review every line it writes.', 'مش بنديله باسوردات ولا بيانات عملاء، وبنراجع كل سطر بيكتبه.', '#D97757'],
+  ['<svg viewBox="0 0 24 24"><path fill="#3ECF8E" d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></svg>',
+    'Supabase', 'Database and logins for our systems.', 'الداتابيز وتسجيل الدخول للأنظمة.', 'Row Level Security: every user can read only their own rows.', 'كل مستخدم بيقدر يشوف بياناته هو بس، والباقي مقفول عليه.', '#3ECF8E'],
+  ['<svg viewBox="0 0 24 24"><path fill="#181717" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>',
+    'GitHub + GitHub Pages', 'Code history, and free hosting for our sites.', 'تاريخ الكود، واستضافة مجانية للمواقع.', 'Two-factor login, protected main branch, HTTPS on every page.', 'تأكيد بخطوتين، وحماية للفرع الأساسي، وHTTPS على كل صفحة.', '#181717'],
+  ['<svg viewBox="0 0 24 24"><path fill="#34A853" d="M11.318 12.545H7.91v-1.909h3.41v1.91zM14.728 0v6h6l-6-6zm1.363 10.636h-3.41v1.91h3.41v-1.91zm0 3.273h-3.41v1.91h3.41v-1.91zM20.727 6.5v15.864c0 .904-.732 1.636-1.636 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.318v6.5h6.5zm-3.273 2.773H6.545v7.909h10.91v-7.91zm-6.136 4.636H7.91v1.91h3.41v-1.91z"/></svg>',
+    'Google Sheets + Apps Script', 'Live reports and simple automations.', 'تقارير لايف وأتمتة بسيطة.', 'Shared with named accounts only, never public links.', 'متشارك مع حسابات محددة بس، ومفيش لينكات مفتوحة للكل.', '#34A853'],
+  ['<svg viewBox="0 0 24 24"><path fill="#3776AB" d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>',
+    'Python', 'AI models and data work.', 'موديلات الذكاء الاصطناعي وتحليل البيانات.', 'Runs on our own machines; customer data never leaves them.', 'بيشتغل على أجهزتنا، وبيانات العملاء مابتطلعش برّاها.', '#3776AB'],
+  ['<svg viewBox="0 0 24 24"><path fill="#111" d="M.38 0a.268.268 0 0 0-.256.332l2.894 11.716a.268.268 0 0 0 .01.04l2.89 11.708a.268.268 0 0 0 .447.128L23.802 7.15a.268.268 0 0 0-.112-.45l-5.784-1.667a.268.268 0 0 0-.123-.035L6.38 1.715a.268.268 0 0 0-.144-.04L.456.01A.268.268 0 0 0 .38 0zm.374.654L5.71 2.08 1.99 5.664zM6.61 2.34l4.864 1.4-3.65 3.515zm-.522.12l1.217 4.926-4.877-1.4zm6.28 1.538l4.878 1.404-3.662 3.53zm-.52.13l1.208 4.9-4.853-1.392zm6.3 1.534l4.947 1.424-3.715 3.574zm-.524.12l1.215 4.926-4.876-1.398zm-15.432.696l4.964 1.424-3.726 3.586zM8.047 8.15l4.877 1.4-3.66 3.527zm-.518.137l1.236 5.017-4.963-1.432zm6.274 1.535l4.965 1.425-3.73 3.586zm-.52.127l1.235 5.012-4.958-1.43zm-9.63 2.438l4.873 1.406-3.656 3.523zm5.854 1.687l4.863 1.403-3.648 3.51zm-.54.04l1.214 4.927-4.875-1.4zm-3.896 4.02l5.037 1.442-3.782 3.638z"/></svg>',
+    'Three.js + GSAP', '3D and motion, like this website.', 'الثري دي والحركة، زي الموقع ده.', 'Loaded only from trusted sources, under a strict content policy.', 'بيتحمّلوا من مصادر موثوقة بس، تحت سياسة أمان صارمة.', '#111111']
+];
+// tools are shown plainly: the mark, the name and what kind of tool it is
+var KIND = ['EDITOR', 'AI', 'DATABASE', 'CODE & HOSTING', 'SHEETS & AUTOMATION', 'AI & DATA', '3D & MOTION'];
+$('uList').innerHTML = TOOLS.map(function(t, i){
+  return '<div class="tool glass" style="--c:' + t[6] + '"><span class="tm">' + t[0] + '</span><div><b>' + t[1] + '</b><span class="kind">' + KIND[i] + '</span></div></div>';
+}).join('');
+document.querySelectorAll('.read-lab').forEach(readWhenSeen);
+if (!reduce) {
+  gsap.to('#uLine', { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '.uses', start: 'top 70%', end: 'bottom 60%', scrub: true } });
+  // each tool card flips in from its side, its logo spins into place, and a pulse of light runs around it
+  document.querySelectorAll('.tool').forEach(function(t, i){
+    var side = i % 2 ? 1 : -1, logo = t.querySelector('.tm');
+    var tl = gsap.timeline({ paused: true });
+    tl.fromTo(t, { x: side * 140, y: 30, opacity: 0, rotateY: side * -55, scale: .86, filter: 'blur(12px)', transformPerspective: 900 },
+               { x: 0, y: 0, opacity: 1, rotateY: 0, scale: 1, filter: 'blur(0px)', duration: .9, ease: 'expo.out' })
+      .fromTo(logo, { rotate: -200, scale: 0 }, { rotate: 0, scale: 1, duration: .8, ease: 'back.out(1.8)' }, .15)
+      .fromTo(t, { boxShadow: '0 0 0 0 rgba(74,174,255,0)' }, { boxShadow: '0 0 0 2px rgba(74,174,255,.9), 0 0 50px 4px rgba(74,174,255,.45)', duration: .3, yoyo: true, repeat: 1, ease: 'power2.out' }, .55)
+      .set(t, { clearProps: 'boxShadow' });
+    ScrollTrigger.create({ trigger: t, start: 'top 88%', onEnter: function(){ tl.play(); }, onLeaveBack: function(){ tl.reverse(); } });
+  });
+  gsap.from('.lab', { y: 80, rotateX: -25, opacity: 0, filter: 'blur(12px)', stagger: .12, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.lab-grid', start: 'top 80%' } });
+  gsap.from('.slogan h2', { y: 60, opacity: 0, filter: 'blur(14px)', duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: '.slogan', start: 'top 80%' } });
+  gsap.from('.contact .panel', { y: 60, opacity: 0, stagger: .15, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.contact', start: 'top 75%' } });
+}
+
+/* ---------- copy email ---------- */
+$('copyMail').addEventListener('click', function(e){
+  e.preventDefault(); e.stopPropagation(); var b = this, t = $('mail').textContent;
+  var ok = function(){ b.textContent = 'COPIED'; setTimeout(function(){ b.textContent = 'COPY'; }, 1600); };
+  try { navigator.clipboard.writeText(t).then(ok, function(){ sel($('mail')); }); } catch (err) { sel($('mail')); }
+});
+function sel(el){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+/* ---------- cursor, magnetic buttons, tilt ---------- */
+if (fine && !reduce) {
+  var ring = document.querySelector('.cring');
+  var qx = gsap.quickTo(ring, 'x', { duration: .4, ease: 'power3' }), qy = gsap.quickTo(ring, 'y', { duration: .4, ease: 'power3' });
+  addEventListener('pointermove', function(e){ qx(e.clientX); qy(e.clientY); });
+  document.addEventListener('pointerover', function(e){ ring.classList.toggle('big', !!e.target.closest('a,button')); });
+  document.querySelectorAll('.magnetic').forEach(function(b){
+    b.addEventListener('pointermove', function(e){ var r = b.getBoundingClientRect(); gsap.to(b, { x: (e.clientX - r.left - r.width / 2) * .3, y: (e.clientY - r.top - r.height / 2) * .4, duration: .4 }); });
+    b.addEventListener('pointerleave', function(){ gsap.to(b, { x: 0, y: 0, duration: .8, ease: 'elastic.out(1,.4)' }); });
+  });
+  document.querySelectorAll('.hwrap').forEach(function(c){
+    c.addEventListener('pointermove', function(e){ var r = c.getBoundingClientRect(); gsap.to(c, { rotateY: ((e.clientX - r.left) / r.width - .5) * 18, rotateX: -((e.clientY - r.top) / r.height - .5) * 18, transformPerspective: 900, duration: .5 }); });
+    c.addEventListener('pointerleave', function(){ gsap.to(c, { rotateX: 0, rotateY: 0, duration: .9, ease: 'power3' }); });
+  });
+}
+// everything is built now: switch the generated parts to the chosen language too
+applyLang(true);
+})();
+</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+/* ---------- "What we build" core: three real meshing gears (big, medium, small) that the idea cards wrap around ---------- */
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const host = document.getElementById('engine');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+host.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), .04).texture;
+const camera = new THREE.PerspectiveCamera(30, 1.4, .1, 100);
+
+const steel = new THREE.MeshStandardMaterial({ color: 0xc3ccd6, metalness: 1, roughness: .26 });
+const dark = new THREE.MeshStandardMaterial({ color: 0x4f5864, metalness: 1, roughness: .34 });
+const blue = new THREE.MeshStandardMaterial({ color: 0x2e9bff, metalness: .85, roughness: .28, emissive: 0x0b4a8a, emissiveIntensity: .5 });
+
+/* gear with trapezoid teeth, a bore and lightening holes; m = module (tooth size), z = teeth */
+function gearGeo(z, m, depth, holes) {
+  const rp = m * z / 2, ra = rp + m, rf = rp - 1.25 * m, step = Math.PI * 2 / z, s = new THREE.Shape();
+  for (let i = 0; i < z; i++) {
+    const a = i * step;
+    [[rf, 0], [ra, .24], [ra, .46], [rf, .7]].forEach(([r, f], k) => {
+      const x = Math.cos(a + f * step) * r, y = Math.sin(a + f * step) * r;
+      (i === 0 && k === 0) ? s.moveTo(x, y) : s.lineTo(x, y);
+    });
+  }
+  s.closePath();
+  const bore = new THREE.Path(); bore.absarc(0, 0, rf * .16, 0, Math.PI * 2, true); s.holes.push(bore);
+  for (let h = 0; h < holes; h++) {
+    const a = h / holes * Math.PI * 2, p = new THREE.Path();
+    p.absarc(Math.cos(a) * rf * .58, Math.sin(a) * rf * .58, rf * .2, 0, Math.PI * 2, true); s.holes.push(p);
+  }
+  const g = new THREE.ExtrudeGeometry(s, { depth, bevelEnabled: true, bevelSize: .03, bevelThickness: .03, bevelSegments: 2, curveSegments: 10 });
+  g.translate(0, 0, -depth / 2);
+  return g;
+}
+const rig = new THREE.Group(); scene.add(rig);
+/* a gear lying in the x-y plane on its own axle, with a glowing hub */
+function gear(z, m, depth, holes, mat, x, y) {
+  const g = new THREE.Group(), mesh = new THREE.Mesh(gearGeo(z, m, depth, holes), mat);
+  g.position.set(x, y, 0); g.add(mesh);
+  const rf = m * z / 2 - 1.25 * m;
+  const hub = new THREE.Mesh(new THREE.TorusGeometry(rf * .22, .05, 10, 40), blue); hub.position.z = depth / 2 + .04; g.add(hub);
+  const axle = new THREE.Mesh(new THREE.CylinderGeometry(rf * .12, rf * .12, depth + .5, 24), dark); axle.rotation.x = Math.PI / 2; g.add(axle);
+  rig.add(g);
+  return { mesh, z, at: [x, y] };
+}
+function mesh2(a, b) { // angle that keeps gear b meshing with gear a
+  const beta = Math.atan2(b.at[1] - a.at[1], b.at[0] - a.at[0]), r = a.z / b.z;
+  return th => beta + Math.PI + Math.PI / b.z - r * (th - beta);
+}
+
+// big 40T drives the medium 24T, which drives the small 14T (module .1, so centre distances are exact)
+const M = .1, BIG = [-1.25, -.35], A1 = .44, A2 = -1.05;
+const MED = [BIG[0] + Math.cos(A1) * M * 32, BIG[1] + Math.sin(A1) * M * 32];
+const SML = [MED[0] + Math.cos(A2) * M * 19, MED[1] + Math.sin(A2) * M * 19];
+const gB = gear(40, M, .42, 7, steel, BIG[0], BIG[1]);
+const gM = gear(24, M, .38, 5, dark, MED[0], MED[1]);
+const gS = gear(14, M, .34, 0, blue, SML[0], SML[1]);
+const angM = mesh2(gB, gM), angS = th => mesh2(gM, gS)(angM(th));
+
+scene.add(new THREE.AmbientLight(0xffffff, .5));
+const keyL = new THREE.DirectionalLight(0xffffff, 1.4); keyL.position.set(4, 6, 8); scene.add(keyL);
+const blueL = new THREE.PointLight(0x2e9bff, 30, 20); blueL.position.set(-3, 2, 4); scene.add(blueL);
+const rimL = new THREE.PointLight(0x9fd3ff, 25, 20); rimL.position.set(3, 3, -3); scene.add(rimL);
+
+function size() { const w = host.clientWidth, h = host.clientHeight; if (!w || !h) return; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+addEventListener('resize', size); size();
+let mx = 0; addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; });
+
+const clock = new THREE.Clock();
+renderer.setAnimationLoop(() => {
+  const r = host.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > innerHeight) { clock.getDelta(); return; }
+  const t = clock.getElapsedTime(), p = (window.HB && window.HB.p) || 0;
+  const th = (reduce ? 0 : t * .45) + p * 7;            // big gear angle: time + scroll
+  gB.mesh.rotation.z = th; gM.mesh.rotation.z = angM(th); gS.mesh.rotation.z = angS(th);
+  // the camera looks at the gears slightly from the side and drifts as you scroll
+  const phi = -.42 + p * .5 + Math.sin(t * .2) * .05 + mx * .15, R = host.clientWidth < 500 ? 13.5 : 11.5;
+  camera.position.set(Math.sin(phi) * R, 1.6, Math.cos(phi) * R);
+  camera.lookAt(0, 0, 0);
+  renderer.render(scene, camera);
+});
+</script>
