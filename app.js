@@ -119,7 +119,7 @@ if (!reduce) {
 /* ---------- founders: Hunter-style cards ---------- */
 var PERSON = '<svg viewBox="0 0 100 100" fill="currentColor"><circle cx="50" cy="34" r="20"/><path d="M8 100c4-26 22-40 42-40s38 14 42 40z"/></svg>';
 var FOUNDERS = [
-  { no: '001', rank: 'SS', name: 'Eng. Ahmed Hindawy', short: 'AHMED HINDAWY', role: 'Co-Founder & CEO', born: '2010-04-01', photo: 'assets/ahmed-bw.webp?v=5',
+  { no: '001', rank: 'SS', name: 'Eng. Ahmed Hindawy', short: 'AHMED HINDAWY', role: 'Co-Founder & CEO', born: '2010-04-01', photo: 'assets/ahmed-bw.webp?v=6',
     roles: ['Automation Engineer', 'Front-End Developer', 'AI Engineer', 'Industrial AI'],
     stats: [['AGE', 'auto'], ['STUDY', 'Baccalaureate'], ['BASED', 'Egypt'], ['PROJECTS', '4+']],
     bio: 'Builds the screens people touch and the automations behind them. Started HINDAWY to give schools, centers and businesses the same quality of software big companies use.',
