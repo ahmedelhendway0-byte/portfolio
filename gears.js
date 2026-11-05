@@ -19,7 +19,7 @@ const camera = new THREE.PerspectiveCamera(30, 1.4, .1, 100);
 
 const steel = new THREE.MeshStandardMaterial({ color: 0xc3ccd6, metalness: 1, roughness: .26 });
 const dark = new THREE.MeshStandardMaterial({ color: 0x4f5864, metalness: 1, roughness: .34 });
-const blue = new THREE.MeshStandardMaterial({ color: 0x5f96c8, metalness: .85, roughness: .28, emissive: 0x1f4a70, emissiveIntensity: .5 });
+const blue = new THREE.MeshStandardMaterial({ color: 0xc8281e, metalness: .85, roughness: .28, emissive: 0x5a1c10, emissiveIntensity: .5 });
 
 /* gear with trapezoid teeth, a bore and lightening holes; m = module (tooth size), z = teeth */
 function gearGeo(z, m, depth, holes) {
@@ -68,8 +68,8 @@ const angM = mesh2(gB, gM), angS = th => mesh2(gM, gS)(angM(th));
 
 scene.add(new THREE.AmbientLight(0xffffff, .5));
 const keyL = new THREE.DirectionalLight(0xffffff, 1.4); keyL.position.set(4, 6, 8); scene.add(keyL);
-const blueL = new THREE.PointLight(0x2e9bff, 30, 20); blueL.position.set(-3, 2, 4); scene.add(blueL);
-const rimL = new THREE.PointLight(0x9fd3ff, 25, 20); rimL.position.set(3, 3, -3); scene.add(rimL);
+const blueL = new THREE.PointLight(0xe8441a, 30, 20); blueL.position.set(-3, 2, 4); scene.add(blueL);
+const rimL = new THREE.PointLight(0xff8a3d, 25, 20); rimL.position.set(3, 3, -3); scene.add(rimL);
 
 function size() { const w = host.clientWidth, h = host.clientHeight; if (!w || !h) return; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
 addEventListener('resize', size); size();
